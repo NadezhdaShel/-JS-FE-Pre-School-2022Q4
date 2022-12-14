@@ -1,0 +1,21 @@
+@import '_normalize';
+@import '_fonts';
+@import '_variables';
+@import '_mixins';
+@import '_placeholders';
+@import '_layouts';
+//general
+@import '_main';
+@import '_base';
+//header
+@import '_header';
+@import '_nav';
+//main
+@import '_welcome';
+@import '_about';
+@import '_service';
+@import '_prices';
+@import '_contacts';
+
+//footer
+@import '_footer';

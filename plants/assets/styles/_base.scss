@@ -1,0 +1,16 @@
+._button {
+  display: inline-block;
+  min-width: 160px;
+  padding: 14px 30px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  text-transform: uppercase;
+  border: 2px solid $color-button-hover;
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+    background-color: $color-button-hover;
+  }
+}
