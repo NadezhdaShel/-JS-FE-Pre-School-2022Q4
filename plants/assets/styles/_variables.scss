@@ -3,19 +3,25 @@ $orange: #e06733;
 $light-gray: #717171;
 $gray: #636060;
 $light-green: #edf2ec;
-$dark: #010201;
+$dark-green: #010201;
+$dark: #000000;
+$light: #ffffff;
 
 //Font Color
-// $color-primary: ;
-// $color-secondary: ;
+$font-color-primary: $gray;
+
+
+$color-primary: $green;
+$color-secondary: $orange;
 
 $color-bg-section: $light-green;
-$color-links-nav: $dark;
+$color-link-nav: $dark-green;
 $color-link-activ: $orange;
 $color-button-hover: $orange;
 
 //max-width-content
-$max-width-content: 1440px;
+$max-width-content: 1220px;
+$max-desktop: 1440px;
 
 //Breack point
 $bp-menu: 768px;

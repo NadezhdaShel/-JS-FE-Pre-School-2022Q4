@@ -1,0 +1,20 @@
+.logo {}
+
+.logo__link {
+    display: inline-block;
+}
+
+.logo__icon {
+    margin: 0px 5px 0px 0px;
+
+    svg {}
+}
+
+.logo__name {
+    font-family: 'Inika', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.3125;
+    color: $dark;
+}

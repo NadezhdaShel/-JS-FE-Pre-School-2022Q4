@@ -1,0 +1,44 @@
+.welcome {}
+
+.welcome__wrapper {
+    padding-top: 50px;
+    padding-bottom: 90px;
+}
+
+.welcome__content {
+    display: flex;
+    align-items: center;
+}
+
+.welcome__article {
+    flex: 0 1 50%;
+    padding: 0px 0px 0px 60px;
+}
+
+.welcome__title {
+    margin: 0px 0px 50px 0px;
+    font-weight: 700;
+    font-size: 4.5rem;
+    line-height: 1.1;
+    color: $light-gray;
+
+    b {
+        color: $color-primary;
+    }
+}
+
+.welcome__text {
+    margin: 0px 0px 50px 0px;
+    @extend %primary-font;
+    line-height: 1.75;
+}
+
+.welcome__active {}
+
+.welcome__button {}
+
+.welcome__image {
+    flex: 0 1 50%;
+
+    img {}
+}

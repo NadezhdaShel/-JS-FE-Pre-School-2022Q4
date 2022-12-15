@@ -1,3 +1,11 @@
 %subtitle-font {}
 
-%primary-font {}
+%primary-font {
+    font-size: 2.0rem;
+    line-height: 1.5;
+    color: $font-color-primary;
+}
+
+%coloured-section {
+    background-color: $color-bg-section;
+}
