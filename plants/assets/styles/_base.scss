@@ -5,10 +5,9 @@
   text-align: center;
   cursor: pointer;
   white-space: nowrap;
-  text-transform: uppercase;
   font-size: 1.6rem;
   line-height: 1.25;
-  color: $dark;
+  color: $color-button-hover;
   border: 2px solid $color-button-hover;
   border-radius: 10px;
   background-color: transparent;
@@ -16,5 +15,6 @@
 
   &:hover {
     background-color: $color-button-hover;
+    color: $light;
   }
 }

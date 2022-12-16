@@ -35,7 +35,10 @@
 
 .welcome__active {}
 
-.welcome__button {}
+.welcome__button {
+    text-transform: uppercase;
+    color: $dark;
+}
 
 .welcome__image {
     flex: 0 1 50%;
