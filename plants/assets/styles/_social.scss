@@ -1,0 +1,36 @@
+.social {}
+
+.social__list {
+    display: flex;
+    list-style: none;
+}
+
+.social__item {
+    margin: 0px 25px 0px 0px;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.social__link {
+    transition: color 0.3s ease 0s;
+
+    &:hover {
+        svg {
+            fill: $color-button-hover;
+        }
+    }
+}
+
+.social__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+
+    svg {
+        fill: $dark;
+    }
+}

@@ -1,0 +1,43 @@
+.footer {}
+
+.footer__wrapper {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__data {
+    font-size: 2.0rem;
+    line-height: 2.5;
+    color: $dark;
+
+    >* {
+        margin: 0px 18px 0px 0px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+.footer__school {
+    font-size: 2.0rem;
+    line-height: 2.5;
+    color: $dark;
+}
+
+.footer__social {}
+
+.footer__link {
+    color: inherit;
+    transition: color 0.3s ease 0s;
+
+    &:hover {
+        color: $color-button-hover;
+    }
+}
