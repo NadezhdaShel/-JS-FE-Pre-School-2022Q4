@@ -1,0 +1,153 @@
+.prices {}
+
+.prices__wrapper {
+    padding-top: 40px;
+    padding-bottom: 115px;
+}
+
+.prices__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.prices__section {
+    flex: 0 1 50%;
+
+    &_bg {
+        padding: 0px 0px 220px 50px;
+        text-align: right;
+        background-image: url(assets/svg/leafs-small.svg);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+    }
+}
+
+.prices__title {
+    flex: 0 1 auto;
+    margin: 0px 0px 60px 0px;
+    font-family: 'Inter', sans-serif;
+    color: $dark;
+
+}
+
+.prices__subtitle {
+    margin: 0px 0px 40px 0px;
+    font-weight: 700;
+    font-size: 4.0rem;
+    line-height: 1.25;
+    color: $dark;
+
+    b {
+        color: $color-primary;
+    }
+}
+
+.prices__items {
+    max-width: 330px;
+    padding: 35px 40px;
+    border: 1px solid #E3E1D5;
+    border-radius: 20px;
+}
+
+.prices__item {
+    margin: 0px 0px 30px 0px;
+    padding: 16px 35px;
+    cursor: pointer;
+    background: #EDF2EC;
+    border-radius: 20px;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    &.active {}
+}
+
+.prices__category {
+    position: relative;
+    font-weight: 700;
+    font-size: 2.0rem;
+    line-height: 1;
+    color: $dark;
+
+    &::after {
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        content: '';
+        display: none;
+        background-color: #c2c4b9;
+    }
+
+    .prices__item.active & {
+        margin: 0px 0px 20px 0px;
+
+        &::after {
+            display: block;
+        }
+    }
+}
+
+.prices__arrow {
+    right: 5px;
+
+    svg {
+        fill: #d9d9d9;
+        stroke: #989898;
+    }
+
+    .prices__item.active & {
+        svg {
+            fill: #ada1a1;
+            stroke: #e0dada;
+        }
+    }
+}
+
+.prices__info {
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all 2s ease 0;
+
+    .prices__item.active & {
+        visibility: visible;
+        max-height: none;
+        overflow: auto;
+    }
+}
+
+.prices__description {
+    margin: 0px 0px 10px 0px;
+    font-weight: 300;
+    font-size: 1.0rem;
+    line-height: 1;
+    color: $light-gray;
+}
+
+.prices__price {
+    margin: 0px 0px 10px 0px;
+    font-size: 1.2rem;
+    line-height: 1.67;
+    color: $dark;
+}
+
+.prices__price-value {
+    font-weight: 700;
+    color: $color-secondary;
+}
+
+.prices__price-period {}
+
+.prices__order {}
+
+.prices__order-button {}
+
+
+
+.prices__active {}
+
+.prices__button {}

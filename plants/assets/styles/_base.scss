@@ -18,3 +18,39 @@
     color: $light;
   }
 }
+
+.button-start {
+  display: inline-block;
+  min-width: 86px;
+  padding: 3px 20px;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.42;
+  color: $light-gray;
+  border-radius: 10px;
+  border: 1px solid $light;
+  background-color: $light;
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+    border-color: $color-button-hover;
+    color: $color-button-hover;
+  }
+}
+
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  transform: translateY(-50%);
+
+  &.active {
+    transform: rotate(180deg) translateY(-50%);
+  }
+}

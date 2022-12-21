@@ -6,7 +6,7 @@
     padding-top: 60px;
     padding-bottom: 60px;
     min-height: 550px;
-    background-image: url(assets/img/contact_woman.jpg);
+    background-image: url(assets/img/contact_woman.png);
     background-repeat: no-repeat;
     background-position: left bottom;
 }
@@ -26,24 +26,33 @@
 
 .contacts__select {
     display: inline-block;
-    min-width: 455px;
+    width: 455px;
     padding: 18px 75px 18px 35px;
     cursor: pointer;
-    background-color: $color-select;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border: none;
-    border-radius: 0;
     font-family: 'Inika', serif;
     font-size: 2.0rem;
     line-height: 2;
     letter-spacing: 0.05em;
     color: $light-gray;
+    border: none;
+    border-radius: 0;
     appearance: none;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent; //$color-select;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    // background: url(assets/svg/accordion_btn.svg);
+    // background-repeat: no-repeat;
+    // background-size: 16px 16px;
+    // background-position: center right 35px;
 
-    &:focus {
-        background-color: $color-select-activ;
+    &::-ms-expand {
+        display: none;
     }
+
+    // &:focus {
+    //     background-color: $color-select-activ;
+    // }
 
     option {}
 }
@@ -51,25 +60,34 @@
 .contacts__city-select {
     position: relative;
     margin: 0px 0px 60px 0px;
-
-    &::after {
-        position: absolute;
-        top: 50%;
-        right: 35px;
-        width: 16px;
-        height: 16px;
-        display: inline-block;
-        content: "";
-        cursor: pointer;
-        border-radius: 50%;
-        transform: translate(-100%, -50%);
-        color: #e1dcd9;
-        background-color: #afa1a1;
-    }
+    background-color: $color-select;
+    // background: url(assets/svg/accordion_btn.svg);
+    // background-repeat: no-repeat;
+    // background-size: 16px 16px;
+    // background-position: center right 35px;
 }
 
+.contacts__arrow {
+    right: 40px;
+
+    svg {
+        fill: #afa1a1;
+        stroke: #e0dcdd;
+    }
+
+    &.active {
+        svg {
+            fill: #8aa07c;
+            stroke: #d4dace;
+        }
+    }
+}
 
 .contacts__info {
     min-width: 455px;
     display: none;
+
+    &.active {
+        display: block;
+    }
 }

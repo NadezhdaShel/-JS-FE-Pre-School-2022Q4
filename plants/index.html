@@ -169,12 +169,72 @@
               </div>
             </div>
           </div>
-
-
         </div>
       </section>
       <section class="prices" id="prices">
-        <div class="prices__wrapper wrapper"></div>
+        <div class="prices__wrapper wrapper">
+          <div class="prices__content">
+            <div class="prices__section">
+              <h2 class="prices__title">Prices</h2>
+              <dl class="prices__items">
+                <div class="prices__item">
+                  <dt class="prices__category">Basics
+                    <span class="prices__arrow arrow-button">
+                      <svg width="16" height="16">
+                        <use xlink:href="assets/svg/icons.svg#arrow"></use>
+                      </svg>
+                    </span>
+                  </dt>
+                  <dd class="prices__info">
+                    <div class="prices__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Doloremque</div>
+                    <div class="prices__price"><span class="prices__price-value">$25</span>&nbsp;<span
+                        class="prices__price-period">&#47;&nbsp;per hour</span></div>
+                    <div class="prices__order"><button class="prices__order-button button-start">Order</button></div>
+                  </dd>
+                </div>
+                <div class="prices__item">
+                  <dt class="prices__category">Standard
+                    <span class="prices__arrow arrow-button">
+                      <svg width="16" height="16">
+                        <use xlink:href="assets/svg/icons.svg#arrow"></use>
+                      </svg>
+                    </span>
+                  </dt>
+                  <dd class="prices__info">
+                    <div class="prices__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Doloremque</div>
+                    <div class="prices__price"><span class="prices__price-value">$25</span>&nbsp;<span
+                        class="prices__price-period">&#47;&nbsp;per hour</span></div>
+                    <div class="prices__order"><button class="prices__order-button button-start">Order</button></div>
+                  </dd>
+                </div>
+                <div class="prices__item">
+                  <dt class="prices__category">Pro care
+                    <span class="prices__arrow arrow-button">
+                      <svg width="16" height="16">
+                        <use xlink:href="assets/svg/icons.svg#arrow"></use>
+                      </svg>
+                    </span>
+                  </dt>
+                  <dd class="prices__info">
+                    <div class="prices__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Doloremque</div>
+                    <div class="prices__price"><span class="prices__price-value">$25</span>&nbsp;<span
+                        class="prices__price-period">&#47;&nbsp;per hour</span></div>
+                    <div class="prices__order"><button class="prices__order-button button-start">Order</button></div>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+            <div class="prices__section prices__section_bg">
+              <div class="prices__subtitle">Our best <b>gardeners</b> are ready to help you</div>
+              <div class="prices__active">
+                <button class="prices__button button">Contact us</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="contacts" id="contacts">
         <div class="contacts__wrapper wrapper">
@@ -182,11 +242,17 @@
           <div class="contacts__content">
             <div class="contacts__city-select">
               <select class="contacts__select" id="selectCity">
-                <option value="city1">Canandaigua, NY</option>
-                <option value="city2">New York City</option>
-                <option value="city3">Yonkers, NY</option>
-                <option value="city4">Sherrill, NY</option>
+                <option disabled selected>City</option>
+                <option value="Canandaigua, NY">Canandaigua, NY</option>
+                <option value="New York City">New York City</option>
+                <option value="Yonkers, NY">Yonkers, NY</option>
+                <option value="Sherrill, NY">Sherrill, NY</option>
               </select>
+              <span class="contacts__arrow arrow-button">
+                <svg width="16" height="16">
+                  <use xlink:href="assets/svg/icons.svg#arrow"></use>
+                </svg>
+              </span>
             </div>
             <div class="contacts__info contacts-info">
               <div class="contacts-info__items">
@@ -196,7 +262,7 @@
                   <div class="contacts-info__item">Office adress:</div>
                 </div>
                 <div class="contacts-info__text">
-                  <div class="contacts-info__item">Canandaigua, NY</div>
+                  <div class="contacts-info__item city">Canandaigua, NY</div>
                   <div class="contacts-info__item">+1 585 393 0001</div>
                   <div class="contacts-info__item">151 Charlotte Street</div>
                 </div>
@@ -211,7 +277,7 @@
                   <div class="contacts-info__item">Office adress:</div>
                 </div>
                 <div class="contacts-info__text">
-                  <div class="contacts-info__item">New York City</div>
+                  <div class="contacts-info__item city">New York City</div>
                   <div class="contacts-info__item">+1 212 456 0002</div>
                   <div class="contacts-info__item">9 East 91st Street</div>
                 </div>
@@ -226,7 +292,7 @@
                   <div class="contacts-info__item">Office adress:</div>
                 </div>
                 <div class="contacts-info__text">
-                  <div class="contacts-info__item">Yonkers, NY</div>
+                  <div class="contacts-info__item city">Yonkers, NY</div>
                   <div class="contacts-info__item">+1 914 678 0003</div>
                   <div class="contacts-info__item">511 Warburton Ave</div>
                 </div>
@@ -241,7 +307,7 @@
                   <div class="contacts-info__item">Office adress:</div>
                 </div>
                 <div class="contacts-info__text">
-                  <div class="contacts-info__item">Sherrill, NY</div>
+                  <div class="contacts-info__item city">Sherrill, NY</div>
                   <div class="contacts-info__item">+1 315 908 0004</div>
                   <div class="contacts-info__item">14 WEST Noyes BLVD</div>
                 </div>
@@ -289,8 +355,8 @@
               <li class="social__item">
                 <a href="" class="social__link">
                   <span class="social__icon">
-                    <svg width="22" height="22">
-                      <use xlink:href="assets/svg/icons.svg#Vector3"></use>
+                    <svg width="28" height="28">
+                      <use xlink:href="assets/svg/icons.svg#pinterest"></use>
                     </svg>
                   </span>
                 </a>
