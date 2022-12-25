@@ -10,9 +10,11 @@ $green1: #D6E7D2;
 $green2: #c1e698;
 
 //Font Color
-$font-color-primary: $gray;
+$font-color-primary: $light-gray;
+$font-color-secondary: $gray;
+$font-color-dark: $dark;
 
-
+//base color
 $color-primary: $green;
 $color-secondary: $orange;
 
@@ -27,9 +29,10 @@ $color-button-hover: $orange;
 $max-width-content: 1220px;
 $max-desktop: 1440px;
 
-//Breack point
+//Breack point menu
 $bp-menu: 768px;
 
+//Breack point
 $desktop: 1440px;
 $tablet: 768px;
 $mobile: 380px;

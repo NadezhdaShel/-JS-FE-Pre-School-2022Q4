@@ -28,7 +28,7 @@
 
 .nav__item {
     position: relative;
-    margin: 0px 45px 0px 0px;
+    margin: 0px 47px 0px 0px;
     list-style: none;
 
     &:last-child {
@@ -48,10 +48,12 @@
 
     &:hover {
         color: $color-link-activ;
+        font-weight: 700;
     }
 
     &_active {
         color: $color-link-activ;
+        font-weight: 700;
     }
 }
 

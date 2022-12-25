@@ -1,8 +1,14 @@
 .about {}
 
 .about__wrapper {
+    min-height: 660px;
     padding-top: 100px;
     padding-bottom: 90px;
+    background-repeat: no-repeat;
+    background-image: url(assets/img/houseplant.png);
+    background-position: right bottom;
+    background-size: 38% auto;
+    background-origin: content-box;
 }
 
 .about__content {
@@ -27,7 +33,9 @@
 }
 
 .about__text {
-    @extend %primary-font;
+    font-size: 2.0rem;
+    line-height: 1.5;
+    color: $font-color-secondary;
 
     p {}
 }
