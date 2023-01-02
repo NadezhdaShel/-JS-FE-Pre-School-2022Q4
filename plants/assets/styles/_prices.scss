@@ -64,14 +64,24 @@
     &.active {}
 }
 
+details summary::-webkit-details-marker {
+    display: none;
+
+}
+
+details>summary {
+    list-style: none;
+}
+
 .prices__category {
     position: relative;
+    padding: 0px 30px 0px 0px;
     font-weight: 700;
     font-size: 2.0rem;
     line-height: 1;
     color: $font-color-dark;
 
-    &::after {
+    &::before {
         position: absolute;
         bottom: -12px;
         left: 0;
@@ -82,42 +92,38 @@
         background-color: #c2c4b9;
     }
 
-    .prices__item.active & {
-        margin: 0px 0px 20px 0px;
-
-        &::after {
-            display: block;
-        }
+    &::after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        content: '';
+        display: inline-block;
+        background-color: #D9D9D9;
+        background-image: url(assets/svg/arrow-close.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: translateY(-50%);
     }
 }
 
-.prices__arrow {
-    
-    svg {
-        fill: #d9d9d9;
-        stroke: #989898;
+
+details[open] summary {
+    margin: 0px 0px 20px 0px;
+
+    &::before {
+        display: block;
     }
 
-    .prices__item.active & {
-        svg {
-            fill: #ada1a1;
-            stroke: #e0dada;
-        }
-    }
-}
-
-.prices__info {
-    max-height: 0;
-    visibility: hidden;
-    overflow: hidden;
-    transition: all 2s ease 0;
-
-    .prices__item.active & {
-        visibility: visible;
-        max-height: none;
-        overflow: auto;
+    &::after {
+        background-color: #AEA1A1;
+        background-image: url(assets/svg/arrow-open.svg);
     }
 }
+
+.prices__info {}
 
 .prices__description {
     margin: 0px 0px 10px 0px;
