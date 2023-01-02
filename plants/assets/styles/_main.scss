@@ -1,3 +1,31 @@
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+p,
+img,
+ol,
+ul,
+li,
+form,
+details,
+footer,
+header,
+nav,
+section,
+summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 html,
 body {
   height: 100%;
@@ -32,6 +60,7 @@ h1 {
 
   b {
     color: $color-primary;
+    font-weight: inherit;
   }
 }
 
@@ -44,6 +73,7 @@ h2 {
 
   b {
     color: $color-secondary;
+    font-weight: inherit;
   }
 }
 
@@ -55,11 +85,9 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100%;
-
 }
 
-.fullscreen {
-  min-height: 100vh;
+.head-block {
   @extend %coloured-section;
 }
 

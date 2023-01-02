@@ -320,21 +320,7 @@ template {
   display: none;
 }
 
-//-------
-*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
+//---
 img {
   vertical-align: top;
 }
@@ -354,13 +340,4 @@ a:hover {
 :focus,
 :active {
   outline: none;
-}
-
-button,
-input,
-textarea,
-select {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
 }
