@@ -40,20 +40,19 @@
     display: block;
     white-space: nowrap;
     font-family: 'Inika', serif;
-    font-weight: 700;
     font-size: 1.6rem;
     line-height: 3.12;
     color: $color-link-nav;
-    transition: color 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
 
     &:hover {
         color: $color-link-activ;
-        font-weight: 700;
+        text-shadow: 0.5px 0 0 #e06733;
     }
 
     &_active {
         color: $color-link-activ;
-        font-weight: 700;
+        text-shadow: 0.5px 0 0 #e06733;
     }
 }
 

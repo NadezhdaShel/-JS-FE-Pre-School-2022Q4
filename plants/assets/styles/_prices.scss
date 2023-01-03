@@ -25,8 +25,10 @@
 
 .prices__title {
     flex: 0 1 auto;
-    margin: 0px 0px 56px 0px;
+    margin: 0px 0px 60px 0px;
     font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
     color: $font-color-dark;
 
 }
@@ -44,7 +46,7 @@
 }
 
 .prices__items {
-    max-width: 330px;
+    max-width: 332px;
     padding: 34px 41px;
     border: 1px solid #E3E1D5;
     border-radius: 20px;
@@ -54,14 +56,20 @@
     margin: 0px 0px 30px 0px;
     padding: 16px 40px;
     cursor: pointer;
-    background: #EDF2EC;
+    background: $color-accord;
     border-radius: 20px;
+    transition: all 0.3s ease 0s;
 
     &:last-child {
         margin: 0;
     }
-
-    &.active {}
+    &:hover {
+        background: $color-accord-activ;
+    }
+    &[open] {
+        padding-bottom: 12px;
+        background: $color-accord-activ;
+    }
 }
 
 details summary::-webkit-details-marker {
@@ -83,7 +91,7 @@ details>summary {
 
     &::before {
         position: absolute;
-        bottom: -12px;
+        bottom: -9px;
         left: 0;
         width: 100%;
         height: 1px;
@@ -107,26 +115,23 @@ details>summary {
         background-position: center;
         transform: translateY(-50%);
     }
-}
-
-
-details[open] summary {
-    margin: 0px 0px 20px 0px;
-
-    &::before {
-        display: block;
-    }
-
-    &::after {
-        background-color: #AEA1A1;
-        background-image: url(assets/svg/arrow-open.svg);
+    details[open] & {
+        margin: 0px 0px 15px 0px;
+    
+        &::before {
+            display: block;
+        }
+    
+        &::after {
+            background-color: #AEA1A1;
+            background-image: url(assets/svg/arrow-open.svg);
+        }
     }
 }
-
 .prices__info {}
 
 .prices__description {
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 6px 0px;
     font-weight: 300;
     font-size: 1.0rem;
     line-height: 1;
@@ -134,18 +139,27 @@ details[open] summary {
 }
 
 .prices__price {
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 5px 0px;
+}
+.prices__price-currency {
     font-size: 1.2rem;
     line-height: 1.67;
-    color: $font-color-dark;
-}
-
-.prices__price-value {
     font-weight: 700;
     color: $color-secondary;
 }
 
-.prices__price-period {}
+.prices__price-value {
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 700;
+    color: $color-secondary;
+}
+
+.prices__price-period {
+    font-size: 1.2rem;
+    line-height: 1.67;
+    color: $font-color-dark;
+}
 
 .prices__order {}
 

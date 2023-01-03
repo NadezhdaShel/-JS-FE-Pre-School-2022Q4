@@ -379,7 +379,7 @@ h1 b {
 h2 {
   font-family: "Inika", serif;
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.3;
   color: #499a18;
 }
@@ -407,21 +407,34 @@ h2 b {
 
 .button {
   display: inline-block;
-  min-width: 158px;
-  padding: 12px 40px;
   text-align: center;
   cursor: pointer;
   white-space: nowrap;
-  font-family: "Inika", serif;
-  font-size: 2rem;
-  line-height: 1.3;
-  color: #e06733;
   border: 1px solid #e06733;
-  border-radius: 5px;
   background-color: transparent;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+.button_small {
+  min-width: 158px;
+  padding: 10px 26px;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: #000000;
+  border-width: 2px;
+  border-radius: 10px;
+}
+.button_big {
+  min-width: 161px;
+  padding: 11px 40px;
+  font-family: "Inika", serif;
+  font-size: 2rem;
+  line-height: 1.3;
+  color: #e06733;
+  border-radius: 5px;
 }
 .button:hover {
   background-color: #e06733;
@@ -529,6 +542,12 @@ h2 b {
   font-size: 1.6rem;
   line-height: 1.3;
   color: #000000;
+  -webkit-transition: color 0.2s ease 0s;
+  -o-transition: color 0.2s ease 0s;
+  transition: color 0.2s ease 0s;
+}
+.logo__link:hover .logo__name {
+  color: #e06733;
 }
 
 .header__wrapper {
@@ -597,21 +616,20 @@ h2 b {
   display: block;
   white-space: nowrap;
   font-family: "Inika", serif;
-  font-weight: 700;
   font-size: 1.6rem;
   line-height: 3.12;
   color: #010201;
-  -webkit-transition: color 0.2s ease 0s;
-  -o-transition: color 0.2s ease 0s;
-  transition: color 0.2s ease 0s;
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
 }
 .nav__link:hover {
   color: #e06733;
-  font-weight: 700;
+  text-shadow: 0.5px 0 0 #e06733;
 }
 .nav__link_active {
   color: #e06733;
-  font-weight: 700;
+  text-shadow: 0.5px 0 0 #e06733;
 }
 
 .nav__mini {
@@ -697,17 +715,6 @@ h2 b {
   line-height: 1.75;
 }
 
-.welcome__button {
-  padding: 10px 26px;
-  font-family: "Inter", sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.25;
-  text-transform: uppercase;
-  color: #000000;
-  border-width: 2px;
-  border-radius: 10px;
-}
-
 .about__wrapper {
   min-height: 660px;
   padding-top: 100px;
@@ -756,9 +763,9 @@ h2 b {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin: 0px 0px 80px 0px;
 }
 
@@ -776,7 +783,7 @@ h2 b {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 66.66%;
           flex: 0 1 66.66%;
-  padding: 0px 0px 0px 40px;
+  padding: 30px 0px 0px 40px;
 }
 
 .service__button {
@@ -884,8 +891,10 @@ h2 b {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
-  margin: 0px 0px 56px 0px;
+  margin: 0px 0px 60px 0px;
   font-family: "Inter", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
   color: #000000;
 }
 
@@ -901,7 +910,7 @@ h2 b {
 }
 
 .prices__items {
-  max-width: 330px;
+  max-width: 332px;
   padding: 34px 41px;
   border: 1px solid #E3E1D5;
   border-radius: 20px;
@@ -913,10 +922,21 @@ h2 b {
   cursor: pointer;
   background: #EDF2EC;
   border-radius: 20px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 .prices__item:last-child {
   margin: 0;
 }
+.prices__item:hover {
+  background: #D6E7D2;
+}
+.prices__item[open] {
+  padding-bottom: 12px;
+  background: #D6E7D2;
+}
+
 details summary::-webkit-details-marker {
   display: none;
 }
@@ -935,7 +955,7 @@ details > summary {
 }
 .prices__category::before {
   position: absolute;
-  bottom: -12px;
+  bottom: -9px;
   left: 0;
   width: 100%;
   height: 1px;
@@ -960,20 +980,19 @@ details > summary {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-
-details[open] summary {
-  margin: 0px 0px 20px 0px;
+details[open] .prices__category {
+  margin: 0px 0px 15px 0px;
 }
-details[open] summary::before {
+details[open] .prices__category::before {
   display: block;
 }
-details[open] summary::after {
+details[open] .prices__category::after {
   background-color: #AEA1A1;
   background-image: url(assets/svg/arrow-open.svg);
 }
 
 .prices__description {
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 6px 0px;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1;
@@ -981,15 +1000,27 @@ details[open] summary::after {
 }
 
 .prices__price {
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 5px 0px;
+}
+
+.prices__price-currency {
   font-size: 1.2rem;
   line-height: 1.67;
-  color: #000000;
+  font-weight: 700;
+  color: #e06733;
 }
 
 .prices__price-value {
+  font-size: 1.6rem;
+  line-height: 1.25;
   font-weight: 700;
   color: #e06733;
+}
+
+.prices__price-period {
+  font-size: 1.2rem;
+  line-height: 1.67;
+  color: #000000;
 }
 
 .prices__button {
@@ -1047,7 +1078,7 @@ details[open] summary::after {
 }
 
 .contacts__title {
-  margin: 0px 0px 30px 0px;
+  margin: 0px 0px 35px 0px;
   text-align: center;
   font-weight: 700;
 }
@@ -1089,6 +1120,9 @@ details[open] summary::after {
 .contacts__select::-ms-expand {
   display: none;
 }
+.contacts__city-select:hover .contacts__select {
+  background-color: #c1e698;
+}
 .contacts__city-select {
   position: relative;
   margin: 0px 0px 60px 0px;
@@ -1096,7 +1130,7 @@ details[open] summary::after {
 }
 
 .contacts__arrow {
-  right: 40px;
+  right: 35px;
 }
 .contacts__arrow svg {
   fill: #afa1a1;
@@ -1140,6 +1174,10 @@ details[open] summary::after {
 }
 .footer__data > *:last-child {
   margin: 0;
+}
+
+.footer__school {
+  padding: 0px 0px 0px 20px;
 }
 
 .footer__link {
