@@ -313,6 +313,17 @@ a:hover {
   margin: 0 auto;
   padding: 0 calc((1440px - 1220px) / 2);
 }
+@media (max-width: 900px) {
+  .wrapper {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 599px) {
+  .wrapper {
+    padding: 0 25px;
+  }
+}
+
 *,
 *:before,
 *:after {
@@ -716,14 +727,43 @@ h2 b {
 }
 
 .about__wrapper {
-  min-height: 660px;
   padding-top: 100px;
   padding-bottom: 90px;
+}
+@media (max-width: 900px) {
+  .about__wrapper {
+    padding-bottom: 95px;
+  }
+}
+@media (max-width: 599px) {
+  .about__wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.about__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
   background-repeat: no-repeat;
   background-image: url(assets/img/houseplant.png);
-  background-position: right bottom;
-  background-size: 38% auto;
+  background-position: right center;
+  background-size: 76% auto;
   background-origin: content-box;
+}
+@media (max-width: 900px) {
+  .about__image {
+    padding-top: 38%;
+    background-position: bottom center;
+    background-size: 38% auto;
+  }
+}
+@media (max-width: 599px) {
+  .about__image {
+    padding-top: 45%;
+    background-size: 45% auto;
+  }
 }
 
 .about__content {
@@ -731,22 +771,45 @@ h2 b {
   display: -ms-flexbox;
   display: flex;
 }
-
-.about__foto {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
-  text-align: right;
+@media (max-width: 900px) {
+  .about__content {
+    display: block;
+  }
 }
+
 .about__article {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
-  padding: 60px 40px 60px 0px;
+  padding: 60px 0px;
+}
+@media (max-width: 900px) {
+  .about__article {
+    padding: 0;
+    margin: 0px 0px 75px 0px;
+  }
+}
+@media (max-width: 599px) {
+  .about__article {
+    margin: 0px 0px 5px 0px;
+  }
 }
 
 .about__title {
   margin: 0px 0px 40px 0px;
+}
+@media (max-width: 900px) {
+  .about__title {
+    margin: 0px 0px 47px 0px;
+    text-align: center;
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 599px) {
+  .about__title {
+    margin: 0px 0px 12px 0px;
+    font-size: 2.5rem;
+  }
 }
 
 .about__text {
@@ -754,6 +817,13 @@ h2 b {
   line-height: 1.5;
   color: #636060;
 }
+@media (max-width: 599px) {
+  .about__text {
+    font-size: 1.5rem;
+    line-height: 1.67;
+  }
+}
+
 .service__wrapper {
   padding-top: 40px;
   padding-bottom: 120px;
