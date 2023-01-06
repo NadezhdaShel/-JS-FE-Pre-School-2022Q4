@@ -3,6 +3,9 @@
 .social__list {
     display: flex;
     list-style: none;
+    @media (max-width: $tablet-point) {
+        justify-content: center;
+    }
 }
 
 .social__item {

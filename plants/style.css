@@ -515,6 +515,13 @@ h2 b {
   display: flex;
   list-style: none;
 }
+@media (max-width: 768px) {
+  .social__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 
 .social__item {
   margin: 0px 20px 0px 0px;
@@ -1322,6 +1329,18 @@ details[open] .prices__category::after {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+@media (max-width: 768px) {
+  .footer__wrapper {
+    padding-top: 33px;
+    padding-bottom: 18px;
+  }
+}
+@media (max-width: 599px) {
+  .footer__wrapper {
+    padding-top: 22px;
+    padding-bottom: 7px;
+  }
+}
 
 .footer__content {
   display: -webkit-box;
@@ -1337,9 +1356,26 @@ details[open] .prices__category::after {
   line-height: 2.5;
   color: #000000;
 }
+@media (max-width: 768px) {
+  .footer__content {
+    display: block;
+    text-align: center;
+    line-height: 1.2;
+  }
+}
 
+@media (max-width: 768px) {
+  .footer__data {
+    margin: 0px 0px 16px 0px;
+  }
+}
 .footer__data > * {
   margin: 0px 20px 0px 0px;
+}
+@media (max-width: 768px) {
+  .footer__data > * {
+    margin: 0px 22px 0px 0px;
+  }
 }
 .footer__data > *:last-child {
   margin: 0;
@@ -1347,6 +1383,17 @@ details[open] .prices__category::after {
 
 .footer__school {
   padding: 0px 0px 0px 20px;
+}
+@media (max-width: 768px) {
+  .footer__school {
+    padding: 0;
+    margin: 0px 0px 25px 0px;
+  }
+}
+@media (max-width: 599px) {
+  .footer__school {
+    margin: 0px 0px 10px 0px;
+  }
 }
 
 .footer__link {
