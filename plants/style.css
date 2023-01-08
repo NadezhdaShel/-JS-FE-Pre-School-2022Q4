@@ -386,6 +386,18 @@ h1 b {
   color: #499a18;
   font-weight: inherit;
 }
+@media (max-width: 899px) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.43;
+  }
+}
+@media (max-width: 599px) {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.4;
+  }
+}
 
 h2 {
   font-family: "Inika", serif;
@@ -430,7 +442,7 @@ h2 b {
 }
 .button_small {
   min-width: 158px;
-  padding: 10px 26px;
+  padding: 10px 15px;
   font-family: "Inter", sans-serif;
   font-size: 1.6rem;
   line-height: 1.25;
@@ -438,6 +450,13 @@ h2 b {
   color: #000000;
   border-width: 2px;
   border-radius: 10px;
+}
+@media (max-width: 599px) {
+  .button_small {
+    padding: 9px 15px;
+    min-width: 100px;
+    font-size: 1rem;
+  }
 }
 .button_big {
   min-width: 161px;
@@ -488,23 +507,6 @@ h2 b {
 .button-start:hover {
   border-color: #e06733;
   color: #e06733;
-}
-
-.arrow-button {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-.arrow-button.active {
-  -webkit-transform: rotate(180deg) translateY(-50%);
-      -ms-transform: rotate(180deg) translateY(-50%);
-          transform: rotate(180deg) translateY(-50%);
 }
 
 .social__list {
@@ -565,7 +567,6 @@ h2 b {
 
 .logo__icon {
   display: inline-block;
-  margin: 0px 0px 0px 0px;
 }
 .logo__name {
   display: inline-block;
@@ -587,6 +588,12 @@ h2 b {
   padding-top: 42px;
   padding-bottom: 42px;
 }
+@media (max-width: 899px) {
+  .header__wrapper {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}
 
 .header__navbar {
   display: -webkit-box;
@@ -605,7 +612,7 @@ h2 b {
   display: -ms-flexbox;
   display: flex;
 }
-@media (max-width: 768px) {
+@media (max-width: 599px) {
   .nav__list {
     display: block;
     position: absolute;
@@ -640,6 +647,11 @@ h2 b {
   position: relative;
   margin: 0px 47px 0px 0px;
   list-style: none;
+}
+@media (max-width: 700px) {
+  .nav__item {
+    margin: 0px 30px 0px 0px;
+  }
 }
 .nav__item:last-child {
   margin: 0;
@@ -689,7 +701,7 @@ h2 b {
   height: 2px;
   background-color: #717171;
 }
-@media (max-width: 768px) {
+@media (max-width: 599px) {
   .nav__mini {
     display: block;
   }
@@ -716,6 +728,18 @@ h2 b {
   padding-top: 62px;
   padding-bottom: 62px;
 }
+@media (max-width: 899px) {
+  .welcome__wrapper {
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 599px) {
+  .welcome__wrapper {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
 
 .welcome__content {
   display: -webkit-box;
@@ -727,7 +751,25 @@ h2 b {
   background-repeat: no-repeat;
   background-image: url(assets/img/leafs.png);
   background-position: left top;
-  background-size: 37% auto;
+}
+@media (max-width: 1219px) {
+  .welcome__content {
+    background-size: 41% auto;
+  }
+}
+@media (max-width: 899px) {
+  .welcome__content {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background-position: right top;
+  }
+}
+@media (max-width: 700px) {
+  .welcome__content {
+    display: block;
+    background-image: none;
+  }
 }
 
 .welcome__article {
@@ -736,9 +778,24 @@ h2 b {
           flex: 0 1 50%;
   padding: 36px 0px 32px 60px;
 }
+@media (max-width: 899px) {
+  .welcome__article {
+    padding: 0;
+  }
+}
 
 .welcome__title {
   margin: 0px 0px 45px 0px;
+}
+@media (max-width: 899px) {
+  .welcome__title {
+    margin: 0px 0px 30px 0px;
+  }
+}
+@media (max-width: 599px) {
+  .welcome__title {
+    margin: 0px 0px 20px 0px;
+  }
 }
 
 .welcome__text {
@@ -746,6 +803,18 @@ h2 b {
   font-size: 2rem;
   color: #636060;
   line-height: 1.75;
+}
+@media (max-width: 899px) {
+  .welcome__text {
+    margin: 0px 0px 35px 5px;
+    font-size: 1.6rem;
+    line-height: 1.56;
+  }
+}
+@media (max-width: 599px) {
+  .welcome__text {
+    margin: 0px 0px 26px 0px;
+  }
 }
 
 .about__wrapper {
