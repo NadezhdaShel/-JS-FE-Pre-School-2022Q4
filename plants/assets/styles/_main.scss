@@ -75,12 +75,7 @@ h2 {
     color: $color-secondary;
     font-weight: inherit;
   }
-  @media (max-width: $tablet) {
-    font-size: 3.5rem;
-  }
-  @media (max-width: $mobile) {
-    font-size: 2.5rem;
-}
+  
 }
 
 .page {
