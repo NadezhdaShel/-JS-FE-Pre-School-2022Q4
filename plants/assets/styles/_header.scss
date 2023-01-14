@@ -16,6 +16,9 @@
     align-items: center;
 }
 
-.header__logo {}
+.header__logo {
+    position: relative;
+    z-index: 102;
+}
 
 .header__nav {}

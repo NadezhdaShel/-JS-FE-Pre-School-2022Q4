@@ -48,7 +48,7 @@ body {
   color: #636060;
 
   &.active-burger {
-    overflow: hidden;
+    // overflow: hidden;
   }
 }
 
@@ -95,9 +95,11 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100%;
+  overflow: hidden;
 }
 
 .head-block {
+  position: relative;
   @extend %coloured-section;
 }
 

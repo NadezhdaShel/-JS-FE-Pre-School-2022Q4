@@ -6,23 +6,27 @@
     @media (max-width: $bp-menu) {
         display: block;
         position: absolute;
-        top: 100%;
-        left: 0;
+        top: 0;
+        right: -100%;
         z-index: 99;
         width: 100%;
-        padding: 30px 20px 10px 20px;
+        min-height: 100%;
+        padding: 30px 50px 15px;
+        background-color: $color-bg-section;
         visibility: hidden;
         opacity: 0;
-        background-color: $light;
-        transform: translateY(-100%);
-        transition: transform 0.5s ease 0s;
+        transition: right 0.7s ease 0s, opacity 0s ease 0.7s, visibility 0s ease 0.7s;
+        
+        @media (max-width: $mobile) {
+            padding: 80px 25px 15px;
+        }
     }
 
-    &.active-burger {
+    .nav.active-burger & {
+        transition: right 0.7s ease 0s;
         visibility: visible;
         opacity: 1;
-        min-height: 100vh;
-        transform: translateY(0%);
+        right: 0%;
     }
 }
 
@@ -49,6 +53,10 @@
     color: $color-link-nav;
     transition: all 0.2s ease 0s;
 
+    @media (max-width: $mobile) {
+        line-height: 2.5;
+    }
+
     &:hover {
         color: $color-link-activ;
         text-shadow: 0.5px 0 0 #e06733;
@@ -67,8 +75,6 @@
     display: none;
     width: 40px;
     height: 26px;
-    transition: transform 0.3s;
-    transform-origin: center;
 
     span {
         position: absolute;
@@ -77,7 +83,7 @@
         width: 100%;
         height: 2px;
         background-color: $light-gray;
-
+        transform-origin: center;
     }
 
     @media (max-width: $bp-menu) {
@@ -86,22 +92,45 @@
 
     span:nth-child(1) {
         top: 0px;
+        transition: transform 0.5s ease 0s;
     }
 
     span:nth-child(2) {
         top: 8px;
+        transition: transform 0.5s ease 0.2s;
     }
 
     span:nth-child(3) {
         bottom: 8px;
+        transition: transform 0.5s ease 0.2s;
     }
 
     span:nth-child(4) {
         bottom: 0px;
+        transition: transform 0.5s ease 0s;
     }
 
-    &.active-burger {
-        transform: rotate(90deg);
-    }
+    .nav.active-burger & {
 
+        // transform: rotate(90deg);
+        span:nth-child(1) {
+            transform: rotate(-45deg);
+            top: 12px;
+        }
+
+        span:nth-child(2) {
+            transform: scale(0);
+            transition: transform 0s ease 0s;
+        }
+
+        span:nth-child(3) {
+            transform: scale(0);
+            transition: transform 0s ease 0s;
+        }
+
+        span:nth-child(4) {
+            transform: rotate(45deg);
+            bottom: 12px;
+        }
+    }
 }
