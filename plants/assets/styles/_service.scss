@@ -5,43 +5,94 @@
 .service__wrapper {
     padding-top: 40px;
     padding-bottom: 120px;
+    @media (max-width: $tablet) {
+        padding-top: 60px;
+        padding-bottom: 70px;
+    }
+    @media (max-width: $mobile) {
+        padding-top: 30px;
+        padding-bottom: 27px;
+    }
 }
 
 .service__header {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0 80px;
     margin: 0px 0px 80px 0px;
+    @media (max-width: $tablet) {
+        display: block;
+        margin: 0px 0px 40px 0px;
+    }
 }
 
 .service__title {
-    flex: 0 1 33.33%;
+    flex: 0 1 calc(100% / 3 - 80px / 2);
     margin: 0;
+    
+    @media (max-width: $tablet) {
+        margin: 0px 0px 43px 0px;
+        font-size: 3.5rem;
+    }
+    @media (max-width: $mobile) {
+        margin: 0px 0px 40px 0px;
+        font-size: 2.5rem;
+    }
 }
 
 .service__active {
     display: flex;
-    flex: 0 1 66.66%;
-    padding: 30px 0px 0px 40px;
+    gap: 20px 38px;
+    flex: 0 1 calc(2 * 100% / 3 - 80px / 2);
+    padding: 30px 0px 0px 0px;
+    @media (max-width: $tablet) {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    @media (max-width: $mobile) {
+        gap: 9px 10px;
+    }
 }
 
 .service__button {
-    margin: 0px 38px 0px 0px;
+    // margin: 0px 38px 0px 0px;
 
-    &:last-child {
-        margin: 0;
-    }
+    // &:last-child {
+    //     margin: 0;
+    // }
 
 }
 
 .service__items {
     display: flex;
     flex-wrap: wrap;
-    margin: 0px -116px -55px 0px;
+    gap: 55px 116px;
+    // margin: 0px -116px -55px 0px;
+    @media (max-width: $small-desktop) {
+        gap: 38px 60px;
+    }
+    @media (max-width: $tablet-landscape) {
+        gap: 38px 106px;
+    }
+    @media (max-width: $mobile) {
+        gap: 34px 0;
+        padding: 0 25px;
+    }
 }
 
 .service__item {
-    flex: 0 1 calc(100% / 3);
-    padding: 0px 116px 55px 0px;
+    flex: 1 1 calc((100% - 232px) / 3);
+    // padding: 0px 116px 55px 0px;
+    @media (max-width: $small-desktop) {
+        flex: 1 1 calc((100% - 120px) / 3);
+    }
+    @media (max-width: $tablet-landscape) {
+        flex: 1 1 calc(50% - 106px / 2);
+    }
+    @media (max-width: $mobile) {
+        flex: 1 1 100%;
+    }
 }
 
 .service__card {
@@ -55,7 +106,7 @@
     height: 350px;
 
     img {
-        width: 100%;
+        max-width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
@@ -68,6 +119,9 @@
     padding: 10px 30px 36px 30px;
     border: 1px solid #E3E1D5;
     border-radius: 0px 0px 20px 20px;
+    @media (max-width: $tablet) {
+        padding: 10px 35px 18px 35px;
+    }
 }
 
 .service__name {
@@ -77,9 +131,13 @@
     font-size: 2.0rem;
     line-height: 1;
     color: $color-secondary;
+    @media (max-width: $tablet) {
+        margin: 0px 0px 10px 0px;
+    }
 }
 
 .service__description {
     line-height: 1.25;
+    text-align: center;
     color: $font-color-primary;
 }

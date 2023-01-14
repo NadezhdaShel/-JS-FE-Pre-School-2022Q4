@@ -1,17 +1,20 @@
 .contacts-info {
-    padding: 30px;
+    padding: 25px 33px 30px;
     border: 1px solid #000000;
     border-radius: 20px;
+    @media (max-width: $mobile) {
+        padding: 30px 36px 23px;
+    }
 }
 
 .contacts-info__items {
     display: flex;
-    margin: 0px 0px 30px 0px;
+    margin: 0px 0px 28px 0px;
 }
 
 .contacts-info__item {
-    margin: 0px 0px 24px 0px;
-    line-height: 2.5;
+    margin: 0px 0px 20px 0px;
+    line-height: 1.25;
     letter-spacing: 0.05em;
 
     &:last-child {
