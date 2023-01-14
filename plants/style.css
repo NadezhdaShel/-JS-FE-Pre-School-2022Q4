@@ -382,7 +382,7 @@ h1 b {
   color: #499a18;
   font-weight: inherit;
 }
-@media (max-width: 899px) {
+@media (max-width: 1023px) {
   h1 {
     font-size: 3.5rem;
     line-height: 1.43;
