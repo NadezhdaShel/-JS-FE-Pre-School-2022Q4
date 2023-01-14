@@ -4,7 +4,7 @@
     padding-top: 40px;
     padding-bottom: 115px;
     @media (max-width: $tablet-point) {
-        padding-bottom: 85px;
+        padding-bottom: 86px;
     }
     @media (max-width: $mobile) {
         padding-top: 25px;
@@ -16,16 +16,16 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    @media (max-width: $tablet-point) {
-        flex-wrap: wrap;
+    @media (max-width: $tablet1) {
+        display: block;
+        text-align: center;
     }
 }
 
 .prices__section {
     flex: 1 1 50%;
-    @media (max-width: $mobile) {
-        margin: 0px 0px 20px 0px;
-        text-align: center;
+    @media (max-width: $tablet1) {
+        margin: 0px 0px 19px 0px;
         &:last-child {
             margin: 0;
         }
@@ -37,9 +37,9 @@
         background-repeat: no-repeat;
         background-position: bottom right;
         @media (max-width: $tablet-point) {
-            padding: 100px 0px 210px 0px;
+            padding: 100px 0px 213px 0px;
         }
-        @media (max-width: $mobile) {
+        @media (max-width: $tablet1) {
             text-align: center;
             background-image: none;
             padding: 0;
@@ -57,9 +57,11 @@
     @media (max-width: $tablet-point) {
         padding: 0 15px;
         margin: 0px 0px 57px 0px;
+        font-size: 3.5rem;
     }
     @media (max-width: $mobile) {
         margin: 0px 0px 38px 0px;
+        font-size: 2.5rem;
     }
 }
 
