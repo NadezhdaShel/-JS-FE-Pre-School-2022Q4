@@ -3,16 +3,17 @@
 .logo__link {
     display: flex;
     align-items: center;
+
 }
 
 .logo__icon {
-    display: inline-block;
+    display: block;
 
     svg {}
 }
 
 .logo__name {
-    display: inline-block;
+    display: block;
     font-family: 'Inika', serif;
     font-style: normal;
     font-weight: 400;

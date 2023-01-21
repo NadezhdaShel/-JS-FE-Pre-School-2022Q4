@@ -3,7 +3,7 @@
 }
 
 .contacts__wrapper {
-    min-height: 38.4vw;
+    min-height: 38.1vw;
     padding-top: 60px;
     background-image: url(assets/img/contact_woman.png);
     background-repeat: no-repeat;
@@ -21,7 +21,7 @@
         background-position: 52% bottom;
     }
     @media (max-width: $mobile) {
-        padding-top: 25px;
+        padding-top: 27px;
         padding-bottom: 0;
         background-position: 50% bottom;
     }
