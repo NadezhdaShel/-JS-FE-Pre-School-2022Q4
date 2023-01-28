@@ -17,6 +17,9 @@
 
 <body>
   <div class="page">
+    <!-- <div class="pixel">
+      <div class="pixel__wrapper wrapper"></div>
+    </div> -->
     <div class="head-block">
       <header class="head-block__header header">
         <div class="header__wrapper wrapper">
@@ -181,8 +184,9 @@
                   <div class="prices__info">
                     <div class="prices__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                       Doloremque</div>
-                    <div class="prices__price"><span class="prices__price-currency">$</span><span class="prices__price-value">25</span><span
-                        class="prices__price-period">&nbsp;&#47;&nbsp;per hour</span></div>
+                    <div class="prices__price"><span class="prices__price-currency">$</span><span
+                        class="prices__price-value">25</span><span class="prices__price-period">&nbsp;&#47;&nbsp;per
+                        hour</span></div>
                     <div class="prices__order"><button class="prices__order-button button-start">Order</button></div>
                   </div>
                 </details>
@@ -192,8 +196,9 @@
                   <div class="prices__info">
                     <div class="prices__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                       Doloremque</div>
-                    <div class="prices__price"><span class="prices__price-currency">$</span><span class="prices__price-value">25</span><span
-                        class="prices__price-period">&nbsp;&#47;&nbsp;per hour</span></div>
+                    <div class="prices__price"><span class="prices__price-currency">$</span><span
+                        class="prices__price-value">25</span><span class="prices__price-period">&nbsp;&#47;&nbsp;per
+                        hour</span></div>
                     <div class="prices__order"><button class="prices__order-button button-start">Order</button></div>
                   </div>
                 </details>
@@ -203,15 +208,17 @@
                   <div class="prices__info">
                     <div class="prices__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                       Doloremque</div>
-                    <div class="prices__price"><span class="prices__price-currency">$</span><span class="prices__price-value">25</span><span
-                        class="prices__price-period">&nbsp;&#47;&nbsp;per hour</span></div>
+                    <div class="prices__price"><span class="prices__price-currency">$</span><span
+                        class="prices__price-value">25</span><span class="prices__price-period">&nbsp;&#47;&nbsp;per
+                        hour</span></div>
                     <div class="prices__order"><button class="prices__order-button button-start">Order</button></div>
                   </div>
                 </details>
               </div>
             </div>
             <div class="prices__section prices__section_bg">
-              <div class="prices__subtitle">Our&nbsp;best&nbsp;<b>gardeners</b>&nbsp;are<br>ready&nbsp;to&nbsp;help&nbsp;you</div>
+              <div class="prices__subtitle">
+                Our&nbsp;best&nbsp;<b>gardeners</b>&nbsp;are<br>ready&nbsp;to&nbsp;help&nbsp;you</div>
               <div class="prices__active">
                 <button class="prices__button button button_big">Contact us</button>
               </div>
@@ -223,131 +230,152 @@
         <div class="contacts__wrapper wrapper">
           <h2 class="contacts__title">Contact&nbsp;us</h2>
           <div class="contacts__content">
-            <div class="contacts__city-select">
-              <select class="contacts__select" id="selectCity">
-                <option disabled selected>City</option>
-                <option value="Canandaigua, NY">Canandaigua, NY</option>
-                <option value="New York City">New York City</option>
-                <option value="Yonkers, NY">Yonkers, NY</option>
-                <option value="Sherrill, NY">Sherrill, NY</option>
-              </select>
+            <div class="contacts__city-select select">
+              <button class="contacts__select select__button">City</button>
+              <ul class="contacts__select-list select__list">
+                <li class="contacts__select-item select__item" data-value="canandaigua">Canandaigua, NY</li>
+                <li class="contacts__select-item select__item" data-value="new-york">New York City</li>
+                <li class="contacts__select-item select__item" data-value="yonkers">Yonkers, NY</li>
+                <li class="contacts__select-item select__item" data-value="sherrill">Sherrill, NY</li>
+              </ul>
             </div>
-            <div class="contacts__items">
-              <div class="contacts__info contacts-info">
-                <div class="contacts-info__items">
-                  <div class="contacts-info__caption">
-                    <div class="contacts-info__item">City:</div>
-                    <div class="contacts-info__item">Phone:</div>
-                    <div class="contacts-info__item">Office adress:</div>
-                  </div>
-                  <div class="contacts-info__text">
-                    <div class="contacts-info__item city">Canandaigua, NY</div>
-                    <div class="contacts-info__item">+1 585 393 0001</div>
-                    <div class="contacts-info__item">151 Charlotte Street</div>
-                  </div>
+            <ul class="contacts__list">
+              <li class="contacts__item contacts-info canandaigua">
+                <table class="contacts-info__content">
+                  <tr>
+                    <th>City:</th>
+                    <td>Canandaigua,&nbsp;NY</td>
+                  </tr>
+                  <tr>
+                    <th>Phone:</th>
+                    <td>+1&nbsp;585&nbsp;393&nbsp;0001</td>
+                  </tr>
+                  <tr>
+                    <th>Office adress:</th>
+                    <td>151&nbsp;Charlotte Street</td>
+                  </tr>
+                </table>
+                <div class="contacts-info__call"><a href="tel:+15853930001"
+                    class="contacts-info__button button button_call">Call
+                    us</a>
                 </div>
-                <div class="contacts-info__call"><button class="contacts-info__button button button_call">Call us</button></div>
-              </div>
-              <div class="contacts__info contacts-info">
-                <div class="contacts-info__items">
-                  <div class="contacts-info__caption">
-                    <div class="contacts-info__item">City:</div>
-                    <div class="contacts-info__item">Phone:</div>
-                    <div class="contacts-info__item">Office adress:</div>
-                  </div>
-                  <div class="contacts-info__text">
-                    <div class="contacts-info__item city">New York City</div>
-                    <div class="contacts-info__item">+1 212 456 0002</div>
-                    <div class="contacts-info__item">9 East 91st Street</div>
-                  </div>
-                </div>
-                <div class="contacts-info__call"><button class="contacts-info__button button button_call">Call us</button></div>
-              </div>
-              <div class="contacts__info contacts-info">
-                <div class="contacts-info__items">
-                  <div class="contacts-info__caption">
-                    <div class="contacts-info__item">City:</div>
-                    <div class="contacts-info__item">Phone:</div>
-                    <div class="contacts-info__item">Office adress:</div>
-                  </div>
-                  <div class="contacts-info__text">
-                    <div class="contacts-info__item city">Yonkers, NY</div>
-                    <div class="contacts-info__item">+1 914 678 0003</div>
-                    <div class="contacts-info__item">511 Warburton Ave</div>
-                  </div>
-                </div>
-                <div class="contacts-info__call"><button class="contacts-info__button button button_call">Call us</button></div>
-              </div>
-              <div class="contacts__info contacts-info">
-                <div class="contacts-info__items">
-                  <div class="contacts-info__caption">
-                    <div class="contacts-info__item">City:</div>
-                    <div class="contacts-info__item">Phone:</div>
-                    <div class="contacts-info__item">Office adress:</div>
-                  </div>
-                  <div class="contacts-info__text">
-                    <div class="contacts-info__item city">Sherrill, NY</div>
-                    <div class="contacts-info__item">+1 315 908 0004</div>
-                    <div class="contacts-info__item">14 WEST Noyes BLVD</div>
-                  </div>
-                </div>
-                <div class="contacts-info__call"><button class="contacts-info__button button button_call">Call us</button></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer__wrapper wrapper">
-        <div class="footer__content">
-          <div class="footer__data"><span>&copy;</span><span>2022</span><a href="https://github.com/Nadezhdashel"
-              class="footer__link">github</a></div>
-          <div class="footer__school"><a href="https://rs.school/js-stage0" class="footer__link">Rolling Scopes
-              School</a></div>
-          <div class="footer__social social">
-            <ul class="social__list">
-              <li class="social__item">
-                <a href="https://www.instagram.com/" class="social__link">
-                  <span class="social__icon">
-                    <svg width="28" height="28">
-                      <use xlink:href="assets/svg/icons.svg#instagram"></use>
-                    </svg>
-                  </span>
-                </a>
               </li>
-              <li class="social__item">
-                <a href="https://facebook.com/" class="social__link">
-                  <span class="social__icon">
-                    <svg width="17" height="28">
-                      <use xlink:href="assets/svg/icons.svg#facebook"></use>
-                    </svg>
-                  </span>
-                </a>
+              <li class="contacts__item contacts-info new-york">
+                <table class="contacts-info__content">
+                  <tr>
+                    <th>City:</th>
+                    <td>New&nbsp;York City</td>
+                  </tr>
+                  <tr>
+                    <th>Phone:</th>
+                    <td>+1&nbsp;212&nbsp;456&nbsp;0002</td>
+                  </tr>
+                  <tr>
+                    <th>Office adress:</th>
+                    <td>9&nbsp;East&nbsp;91st Street</td>
+                  </tr>
+                </table>
+                <div class="contacts-info__call"><a href="tel:+12124560002"
+                    class="contacts-info__button button button_call">Call
+                    us</a>
+                </div>
               </li>
-              <li class="social__item">
-                <a href="https://twitter.com/" class="social__link">
-                  <span class="social__icon">
-                    <svg width="28" height="22">
-                      <use xlink:href="assets/svg/icons.svg#twitter"></use>
-                    </svg>
-                  </span>
-                </a>
+              <li class="contacts__item contacts-info yonkers">
+                <table class="contacts-info__content">
+                  <tr>
+                    <th>City:</th>
+                    <td>Yonkers,&nbsp;NY</td>
+                  </tr>
+                  <tr>
+                    <th>Phone:</th>
+                    <td>+1&nbsp;914&nbsp;678&nbsp;0003</td>
+                  </tr>
+                  <tr>
+                    <th>Office adress:</th>
+                    <td>511&nbsp;Warburton Ave</td>
+                  </tr>
+                </table>
+                <div class="contacts-info__call"><a href="tel:+19146780003"
+                    class="contacts-info__button button button_call">Call
+                    us</a>
+                </div>
               </li>
-              <li class="social__item">
-                <a href="https://pinterest.com/" class="social__link">
-                  <span class="social__icon">
-                    <svg width="28" height="28">
-                      <use xlink:href="assets/svg/icons.svg#pinterest"></use>
-                    </svg>
-                  </span>
-                </a>
+              <li class="contacts__item contacts-info sherrill">
+                <table class="contacts-info__content">
+                  <tr>
+                    <th>City:</th>
+                    <td>Sherrill,&nbsp;NY</td>
+                  </tr>
+                  <tr>
+                    <th>Phone:</th>
+                    <td>+1&nbsp;315&nbsp;908&nbsp;0004</td>
+                  </tr>
+                  <tr>
+                    <th>Office adress:</th>
+                    <td>14&nbsp;WEST Noyes BLVD</td>
+                  </tr>
+                </table>
+                <div class="contacts-info__call"><a href="tel:+13159080004"
+                    class="contacts-info__button button button_call">Call
+                    us</a>
+                </div>
               </li>
             </ul>
           </div>
         </div>
+  </div>
+  </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__wrapper wrapper">
+      <div class="footer__content">
+        <div class="footer__data"><span>&copy;</span><span>2022</span><a href="https://github.com/Nadezhdashel"
+            class="footer__link">github</a></div>
+        <div class="footer__school"><a href="https://rs.school/js-stage0" class="footer__link">Rolling Scopes
+            School</a></div>
+        <div class="footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="https://www.instagram.com/" class="social__link">
+                <span class="social__icon">
+                  <svg width="28" height="28">
+                    <use xlink:href="assets/svg/icons.svg#instagram"></use>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="https://facebook.com/" class="social__link">
+                <span class="social__icon">
+                  <svg width="17" height="28">
+                    <use xlink:href="assets/svg/icons.svg#facebook"></use>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="https://twitter.com/" class="social__link">
+                <span class="social__icon">
+                  <svg width="28" height="22">
+                    <use xlink:href="assets/svg/icons.svg#twitter"></use>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="https://pinterest.com/" class="social__link">
+                <span class="social__icon">
+                  <svg width="28" height="28">
+                    <use xlink:href="assets/svg/icons.svg#pinterest"></use>
+                  </svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </footer>
+    </div>
+  </footer>
   </div>
 
   <script src="index.js"></script>

@@ -47,6 +47,81 @@ class Burger {
     }
 }
 
+class Select {
+    constructor(setting) {
+        this.setting = setting;
+        this.select = document.querySelector(this.setting.select);
+        if (this.select === null) { return; }
+        this.sel = {
+            "button": this.select.querySelector(this.setting.selectButton),
+            "selectList": this.select.querySelector(this.setting.selectList),
+            "selectItem": this.select.querySelectorAll(this.setting.selectItem),
+        };
+        this.contentItem = document.querySelectorAll(this.setting.contentItem);
+        this.class_active = this.setting.class_active;
+        this.sectionAnim = document.querySelector(this.setting.sectionAnim);
+        this.class_open_card = this.setting.class_open_card;
+
+        this.addEventListeners();
+    }
+
+    clickSelect() {
+        this.sel.selectList.classList.toggle(this.class_active);
+        this.sel.button.classList.toggle(this.class_active);
+    }
+
+    clickItem(event) {
+        this.sel.button.innerText = event.target.innerText;
+        this.sel.button.focus();
+        this.contentItem.forEach(element => {
+            if (element.classList.contains(event.target.dataset.value)) {
+                element.style.display = 'inline-block';
+                setTimeout(() => {
+                    element.classList.add(this.class_active);
+                    this.sectionAnim.classList.add(this.class_open_card);
+                }, 10);
+
+            } else {
+                element.style.display = 'none';
+                element.classList.remove(this.class_active);
+            }
+        });
+        this.sel.selectList.classList.remove(this.class_active);
+    }
+
+    closeSelect() {
+        this.sel.button.classList.remove(this.class_active);
+        this.sel.selectList.classList.remove(this.class_active);
+    }
+
+    addEventListeners() {
+        //close-open
+        this.sel.button.addEventListener('click', () => {
+            this.clickSelect();
+        });
+
+        //Select item
+        this.sel.selectList.addEventListener('click', (event) => {
+            if (event.target.tagName != "LI") return;
+            this.clickItem(event);
+        });
+
+        // Click out. Close select
+        document.addEventListener('click', (event) => {
+            if (event.target !== this.sel.button) {
+                this.closeSelect();
+            }
+        });
+
+        // Press Tab or Escape. Close select
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Tab' || event.key === 'Escape') {
+                this.closeSelect();
+            }
+        });
+    }
+}
+
 new Burger({
     "navigate": ".nav",
     "navMini": ".nav__mini",
@@ -56,4 +131,13 @@ new Burger({
 })
 
 
-
+new Select({
+    "select": ".select",
+    "selectButton": ".select__button",
+    "selectList": ".select__list",
+    "selectItem": ".select__item",
+    "contentItem": ".contacts__item",
+    "class_active": "active",
+    "sectionAnim": ".contacts__wrapper",
+    "class_open_card": "open-card",
+});

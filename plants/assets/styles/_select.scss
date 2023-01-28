@@ -1,0 +1,60 @@
+.select {
+    position: relative;
+}
+
+.select__button {
+    display: inline-block;
+    cursor: pointer;
+    text-align: left;
+}
+
+.select__list {
+    display: none;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    list-style-type: none;
+    overflow: hidden;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        display: block;
+        background: linear-gradient(180deg, $color-bg-section, $color-bg-section);
+    }
+
+    &.active {
+        display: block;
+
+        &::before {
+            animation: slow 0.3s ease-in-out forwards;
+            background: none;
+            pointer-events: none;
+        }
+    }
+}
+
+@keyframes slow {
+    @for $pos from 0 to 10 {
+        #{$pos * 10%} {
+            background: linear-gradient(180deg, rgba($color-bg-section, 0) 0%, rgba($color-bg-section, 0) #{$pos * 10%}, rgba($color-bg-section, 1) #{$pos * 10% + 10%}, rgba($color-bg-section, 1) 100%);
+        }
+    }
+
+    100% {
+        background: linear-gradient(180deg, rgba($color-bg-section, 0) 0%, rgba($color-bg-section, 0) 100%, rgba($color-bg-section, 1) 100%, rgba($color-bg-section, 1) 100%);
+    }
+}
+
+.select__item {
+    cursor: pointer;
+
+    &.hidden {
+        display: none;
+    }
+}
