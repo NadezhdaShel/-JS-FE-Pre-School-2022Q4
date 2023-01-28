@@ -1,38 +1,34 @@
 .contacts-info {
-    padding: 25px 33px 30px;
+    padding: 7px 20px 30px;
     border: 1px solid #000000;
     border-radius: 20px;
+
     @media (max-width: $mobile) {
-        padding: 30px 36px 23px;
+        padding: 23px 25px 23px;
     }
 }
 
-.contacts-info__items {
-    display: flex;
-    margin: 0px 0px 28px 0px;
-}
-
-.contacts-info__item {
-    margin: 0px 0px 20px 0px;
+.contacts-info__content {
+    margin: 0px 0px 10px 0px;
+    border-spacing: 10px 20px;
     line-height: 1.25;
     letter-spacing: 0.05em;
 
-    &:last-child {
-        margin: 0;
+    @media (max-width: $mobile) {
+        border-spacing: 10px 13px;
     }
-}
 
-.contacts-info__caption {
-    margin: 0px 10px 0px 0px;
-    color: #000000;
-}
+    th {
+        color: #000000;
+    }
 
-.contacts-info__text {
-    color: $font-color-primary;
+    tr {
+        color: $font-color-primary;
+        vertical-align: top;
+    }
+
 }
 
 .contacts-info__call {
     text-align: center;
 }
-
-.contacts-info__button {}
