@@ -3,9 +3,11 @@
 .prices__wrapper {
     padding-top: 40px;
     padding-bottom: 115px;
+
     @media (max-width: $tablet-point) {
         padding-bottom: 86px;
     }
+
     @media (max-width: $mobile) {
         padding-top: 25px;
         padding-bottom: 40px;
@@ -16,6 +18,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+
     @media (max-width: $tablet1) {
         display: block;
         text-align: center;
@@ -24,21 +27,26 @@
 
 .prices__section {
     flex: 1 1 50%;
+
     @media (max-width: $tablet1) {
         margin: 0px 0px 19px 0px;
+
         &:last-child {
             margin: 0;
         }
     }
+
     &_bg {
         padding: 0px 0px 215px 0px;
         text-align: right;
         background-image: url(assets/img/small-leafs.png);
         background-repeat: no-repeat;
         background-position: bottom right;
+
         @media (max-width: $tablet-point) {
             padding: 100px 0px 213px 0px;
         }
+
         @media (max-width: $tablet1) {
             text-align: center;
             background-image: none;
@@ -54,11 +62,13 @@
     font-weight: 700;
     line-height: 1.2;
     color: $font-color-dark;
+
     @media (max-width: $tablet-point) {
         padding: 0 15px;
         margin: 0px 0px 57px 0px;
         font-size: 3.5rem;
     }
+
     @media (max-width: $mobile) {
         margin: 0px 0px 38px 0px;
         font-size: 2.5rem;
@@ -75,13 +85,16 @@
     b {
         color: $color-primary;
     }
+
     @media (max-width: $tablet-landscape) {
         font-size: 2.5rem;
         line-height: 1.4;
     }
+
     @media (max-width: $tablet-point) {
         margin: 0px 0px 27px 0px;
     }
+
     @media (max-width: $mobile) {
         margin: 0px 0px 20px 0px;
         font-size: 2.0rem;
@@ -94,6 +107,7 @@
     padding: 34px 40px;
     border: 1px solid #E3E1D5;
     border-radius: 20px;
+
     @media (max-width: $mobile) {
         padding: 28px 22px;
     }
@@ -103,7 +117,6 @@
     width: 250px;
     margin: 0px 0px 32px 0px;
     padding: 15px 40px;
-    cursor: pointer;
     text-align: left;
     background: $color-accord;
     border-radius: 20px;
@@ -118,9 +131,11 @@
     &:last-child {
         margin: 0;
     }
+
     &:hover {
         background: $color-accord-activ;
     }
+
     &[open] {
         padding-bottom: 12px;
         background: $color-accord-activ;
@@ -139,6 +154,7 @@ details>summary {
 .prices__category {
     position: relative;
     padding: 0px 30px 0px 0px;
+    cursor: pointer;
     font-weight: 700;
     font-size: 2.0rem;
     line-height: 1;
@@ -166,28 +182,29 @@ details>summary {
         right: 0;
         width: 16px;
         height: 16px;
-        border-radius: 50%;
         content: '';
+        pointer-events: none;
         display: inline-block;
-        background-color: #D9D9D9;
-        background-image: url(assets/svg/arrow-close.svg);
+        background-image: url(assets/svg/arrows.svg#accord-close);
         background-repeat: no-repeat;
         background-position: center;
+        background-size: 100%;
         transform: translateY(-50%);
     }
+
     details[open] & {
         margin: 0px 0px 15px 0px;
-    
+
         &::before {
             display: block;
         }
-    
+
         &::after {
-            background-color: #AEA1A1;
-            background-image: url(assets/svg/arrow-open.svg);
+            background-image: url(assets/svg/arrows.svg#accord-open);
         }
     }
 }
+
 .prices__info {}
 
 .prices__description {
@@ -201,6 +218,7 @@ details>summary {
 .prices__price {
     margin: 0px 0px 5px 0px;
 }
+
 .prices__price-currency {
     font-size: 1.2rem;
     line-height: 1.67;
@@ -224,8 +242,6 @@ details>summary {
 .prices__order {}
 
 .prices__order-button {}
-
-
 
 .prices__active {}
 

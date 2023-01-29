@@ -122,6 +122,59 @@ class Select {
     }
 }
 
+class detailsAccordion {
+    constructor(setting) {
+        this.setting = setting;
+        this.accordion = document.querySelector(this.setting.accordion);
+        if (this.accordion === null) { return; }
+        this.items = this.accordion.querySelectorAll("details");
+        this.addEventListeners();
+    }
+
+    onToggle(event) {
+        if (event.target.open) {
+            this.accordion.querySelectorAll("details[open]").forEach(elem => {
+                if (elem === event.target) {
+                    return;
+                }
+                elem.open = false;
+            });
+        }
+    };
+
+    addEventListeners() {
+        this.items.forEach(element => {
+            element.addEventListener("toggle", (event) => {
+                this.onToggle(event);
+            })
+        });
+    }
+}
+
+class buttonLinkAnchor {
+    constructor(setting) {
+        this.setting = setting;
+        this.button = document.querySelectorAll(this.setting.button);
+        if (this.button === null) { return; }
+        this.addEventListeners();
+    }
+    clickButton = () => {
+        let offsetTop = document.getElementById(this.setting.targetSection).offsetTop;
+        scroll({
+            top: offsetTop,
+            behavior: "smooth",
+        });
+    };
+
+    addEventListeners() {
+        this.button.forEach(element => {
+            element.addEventListener('click', () => {
+                this.clickButton();
+            });
+        });
+    }
+}
+
 new Burger({
     "navigate": ".nav",
     "navMini": ".nav__mini",
@@ -141,3 +194,14 @@ new Select({
     "sectionAnim": ".contacts__wrapper",
     "class_open_card": "open-card",
 });
+
+
+new buttonLinkAnchor({
+    "button": ".prices__order-button",
+    "targetSection": "contacts",
+})
+
+
+new detailsAccordion({
+    "accordion": ".accordion",
+})
