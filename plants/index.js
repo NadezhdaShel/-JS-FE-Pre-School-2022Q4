@@ -1,4 +1,4 @@
-
+console.log("1. При нажатии на кнопки: Gargens, Lawn, Planting происходит смена фокуса на услугах в разделе service +50\n - при выборе одной услуги, остальные карточки услуг принимают эффект blur, выбранная услуга остается неизменной + 20\n - пользователь может нажать одновременно две кнопки услуги, тогда эта кнопка тоже принимает стиль активной и карточки с именем услуги выходят из эффекта blur. При этом пользователь не может нажать одновременно все три кнопки услуг +20\n - анимации плавного перемещения кнопок в активное состояние и карточек услуг в эффект blur +10\n2. Accordion в секции prices реализация 3-х выпадающих списков об услугах и ценах + 50\n - при нажатии на dropdown кнопку появляется описание тарифов цен в соответствии с макетом. Внутри реализована кнопка order, которая ведет на секцию contacts, при нажатии на нее Accordion все еще остается открытым +25\n - пользователь может самостоятельно закрыть содержимое нажав на кнопку dropup, но не может одновременно открыть все тарифы услуг, при открытии нового тарифа предыдущее автоматически закрывается +25\n3. В разделе contacts реализован select с выбором городов +25\n - в зависимости от выбора пользователя появляется блок с адресом и телефоном офиса в определенном городе +15\n - при нажатии на кнопку Call us реализован вызов по номеру, который соответствует выбранному городу +10");
 //Burger Menu
 class Burger {
     constructor(setting) {
@@ -158,7 +158,7 @@ class buttonLinkAnchor {
         if (this.button === null) { return; }
         this.addEventListeners();
     }
-    clickButton = () => {
+    clickButton() {
         let offsetTop = document.getElementById(this.setting.targetSection).offsetTop;
         scroll({
             top: offsetTop,
@@ -172,6 +172,57 @@ class buttonLinkAnchor {
                 this.clickButton();
             });
         });
+    }
+}
+
+class Filter {
+    constructor(setting) {
+        this.setting = setting;
+        this.buttons = document.querySelectorAll(this.setting.buttons);
+        this.items = document.querySelectorAll(this.setting.items);
+        this.countSelectButton = 0;
+        this.unactivButton = undefined;
+
+        this.addEventListeners();
+    }
+
+    clickButton(event, currentCategory) {
+        this.items.forEach((element) => {
+            if (element.classList.contains(currentCategory)) {
+                element.classList.toggle(this.setting.class_out_focus);
+            }
+        });
+    };
+
+    addEventListeners() {
+        if (this.buttons) {
+            this.buttons.forEach(element => {
+                element.addEventListener('click', (event) => {
+                    const selectButton = event.target;
+                    if (selectButton.disabled === true)
+                        return;
+                    const currentCategory = selectButton.dataset.filter;
+                    if (selectButton.classList.contains(this.setting.class_select_button)) {
+                        selectButton.classList.remove(this.setting.class_select_button);
+                        this.countSelectButton -= 1;
+                        this.clickButton(event, currentCategory);
+
+                    } else {
+                        selectButton.classList.add(this.setting.class_select_button);
+                        this.countSelectButton += 1;
+                        this.clickButton(event, currentCategory);
+                    }
+                    if (this.countSelectButton === this.setting.limit_select_button) {
+                        this.unactivButton = (Array.from(this.buttons)).find(elem => !elem.classList.contains(this.setting.class_select_button));
+                        this.unactivButton.disabled = true;
+
+                    } else if (this.unactivButton != undefined) {
+                        this.unactivButton.disabled = false;
+                        this.unactivButton = undefined;
+                    }
+                });
+            });
+        }
     }
 }
 
@@ -204,4 +255,12 @@ new buttonLinkAnchor({
 
 new detailsAccordion({
     "accordion": ".accordion",
+})
+
+new Filter({
+    "buttons": ".service__button",
+    "items": ".service__item",
+    "class_out_focus": "out-focus",
+    "class_select_button": "select",
+    "limit_select_button": 2,
 })
