@@ -71,7 +71,7 @@ class Select {
     }
 
     clickItem(event) {
-        this.sel.button.innerText = event.target.innerText;
+        this.sel.button.textContent = event.target.innerText;
         this.sel.button.focus();
         this.contentItem.forEach(element => {
             if (element.classList.contains(event.target.dataset.value)) {
