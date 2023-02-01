@@ -53,7 +53,7 @@ class Select {
         this.select = document.querySelector(this.setting.select);
         if (this.select === null) { return; }
         this.sel = {
-            "button": this.select.querySelector(this.setting.selectButton),
+            "button": this.select.querySelector(this.setting.targetButton),
             "selectList": this.select.querySelector(this.setting.selectList),
             "selectItem": this.select.querySelectorAll(this.setting.selectItem),
         };
@@ -71,7 +71,7 @@ class Select {
     }
 
     clickItem(event) {
-        this.sel.button.innerText = event.target.innerText;
+        this.sel.button.textContent = event.target.innerText;
         this.sel.button.focus();
         this.contentItem.forEach(element => {
             if (element.classList.contains(event.target.dataset.value)) {
@@ -180,16 +180,51 @@ class Filter {
         this.setting = setting;
         this.buttons = document.querySelectorAll(this.setting.buttons);
         this.items = document.querySelectorAll(this.setting.items);
-        this.countSelectButton = 0;
         this.unactivButton = undefined;
-
+        this.activButton = [];
         this.addEventListeners();
     }
 
-    clickButton(event, currentCategory) {
+    clickButton(event) {
+        const targetButton = event.target;
+        if (targetButton.disabled === true)
+            return;
+        const isSelectButton = targetButton.classList.contains(this.setting.class_select_button);
+        const selectCategory = targetButton.dataset.filter;
+        if (isSelectButton) {
+            targetButton.classList.remove(this.setting.class_select_button);
+            this.activButton.splice(this.activButton.indexOf(selectCategory), 1);
+            this.changeClassItem();
+
+        } else {
+            targetButton.classList.add(this.setting.class_select_button);
+            this.activButton.push(selectCategory);
+            this.changeClassItem();
+        }
+        //if select max count button
+        if (this.activButton.length >= this.setting.limit_select_button) {
+            this.unactivButton = (Array.from(this.buttons)).find(elem => !elem.classList.contains(this.setting.class_select_button));
+            this.unactivButton.disabled = true;
+
+        } else if (this.unactivButton != undefined) {
+            //button not disabled
+            this.unactivButton.disabled = false;
+            this.unactivButton = undefined;
+        }
+    };
+    changeClassItem() {
         this.items.forEach((element) => {
-            if (element.classList.contains(currentCategory)) {
-                element.classList.toggle(this.setting.class_out_focus);
+            element.classList.remove(this.setting.class_out_focus);
+            if (this.activButton.length !== 0) {
+                let isSelectItem = false;
+                this.activButton.forEach((e) => {
+                    if (element.classList.contains(e)) {
+                        isSelectItem = true;
+                    }
+                })
+                if (isSelectItem === false) {
+                    element.classList.add(this.setting.class_out_focus);
+                }
             }
         });
     };
@@ -198,28 +233,7 @@ class Filter {
         if (this.buttons) {
             this.buttons.forEach(element => {
                 element.addEventListener('click', (event) => {
-                    const selectButton = event.target;
-                    if (selectButton.disabled === true)
-                        return;
-                    const currentCategory = selectButton.dataset.filter;
-                    if (selectButton.classList.contains(this.setting.class_select_button)) {
-                        selectButton.classList.remove(this.setting.class_select_button);
-                        this.countSelectButton -= 1;
-                        this.clickButton(event, currentCategory);
-
-                    } else {
-                        selectButton.classList.add(this.setting.class_select_button);
-                        this.countSelectButton += 1;
-                        this.clickButton(event, currentCategory);
-                    }
-                    if (this.countSelectButton === this.setting.limit_select_button) {
-                        this.unactivButton = (Array.from(this.buttons)).find(elem => !elem.classList.contains(this.setting.class_select_button));
-                        this.unactivButton.disabled = true;
-
-                    } else if (this.unactivButton != undefined) {
-                        this.unactivButton.disabled = false;
-                        this.unactivButton = undefined;
-                    }
+                    this.clickButton(event);
                 });
             });
         }
@@ -237,7 +251,7 @@ new Burger({
 
 new Select({
     "select": ".select",
-    "selectButton": ".select__button",
+    "targetButton": ".select__button",
     "selectList": ".select__list",
     "selectItem": ".select__item",
     "contentItem": ".contacts__item",
