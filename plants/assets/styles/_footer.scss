@@ -1,0 +1,69 @@
+.footer {}
+
+.footer__wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @media (max-width: $tablet-point) {
+        padding-top: 33px;
+        padding-bottom: 18px;
+    }
+    @media (max-width: $mobile) {
+        padding-top: 22px;
+        padding-bottom: 7px;
+    }
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.0rem;
+    line-height: 2.5;
+    color: $font-color-dark;
+    @media (max-width: $tablet-point) {
+        display: block;
+        text-align: center;
+        line-height: 1.2;
+    }
+}
+
+.footer__data {
+    @media (max-width: $tablet-point) {
+        margin: 0px 0px 16px 0px;
+    }
+
+    >* {
+        margin: 0px 20px 0px 0px;
+
+        @media (max-width: $tablet-point) {
+            margin: 0px 22px 0px 0px;
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+.footer__school {
+    padding: 0px 0px 0px 20px;
+
+    @media (max-width: $tablet-point) {
+        padding: 0;
+        margin: 0px 0px 25px 0px;
+    }
+    @media (max-width: $mobile) {
+        margin: 0px 0px 10px 0px;
+    }
+}
+
+.footer__social {}
+
+.footer__link {
+    color: inherit;
+    transition: color 0.3s ease 0s;
+
+    &:hover {
+        color: $color-button-hover;
+    }
+}

@@ -1,0 +1,24 @@
+.header {}
+
+.header__wrapper {
+    padding-top: 42px;
+    padding-bottom: 42px;
+    
+    @media (max-width: $tablet) {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    position: relative;
+    z-index: 102;
+}
+
+.header__nav {}

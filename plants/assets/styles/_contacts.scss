@@ -1,0 +1,182 @@
+.contacts {
+    @extend %coloured-section;
+}
+
+.contacts__wrapper {
+    min-height: calc(497px + 60px);
+    padding-top: 60px;
+    background-image: url(assets/img/contact_woman.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-origin: content-box;
+
+    @media (max-width: $small-desktop) {
+        background-size: 33% auto;
+        min-height: 38.1vw;
+    }
+
+    @media (max-width: $tablet-landscape) {
+        min-height: auto;
+        padding-top: 40px;
+        padding-bottom: 34%;
+        background-size: 26% auto;
+        background-origin: border-box;
+        background-position: 52% bottom;
+    }
+
+    @media (max-width: $mobile) {
+        padding-top: 27px;
+        padding-bottom: 0;
+        background-position: 50% bottom;
+        transition: background-image 0.9s ease-in 0s;
+
+        &.open-card {
+            background-image: none;
+        }
+    }
+}
+
+.contacts__title {
+    margin: 0px 0px 35px 0px;
+    text-align: center;
+    font-weight: 700;
+
+    @media (max-width: $tablet) {
+        margin: 0px 0px 60px 0px;
+    }
+
+    @media (max-width: $mobile) {
+        margin: 0px 0px 40px 0px;
+        font-size: 2.5rem;
+    }
+}
+
+.contacts__content {
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media (max-width: $tablet-landscape) {
+        align-items: center;
+    }
+}
+
+.contacts__city-select {
+    display: inline-block;
+    margin: 0px 0px 47px 0px;
+
+    @media (max-width: $tablet) {
+        margin: 0px 0px 60px 0px;
+    }
+
+    @media (max-width: $mobile) {
+        margin: 0px 0px 50px 0px;
+    }
+}
+
+.contacts__select {
+    position: relative;
+    min-width: 450px;
+    padding: 5px 35px 5px 20px;
+    font-size: 2.0rem;
+    line-height: 2;
+    letter-spacing: 0.05em;
+    color: $font-color-primary;
+    border: 1px solid $color-select;
+    border-radius: 0;
+    background-color: $color-select;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    &::after {
+        position: absolute;
+        top: 50%;
+        right: 35px;
+        width: 16px;
+        height: 16px;
+        content: '';
+        display: inline-block;
+        background-image: url(assets/svg/arrows.svg#ar-select-close);
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: translateY(-50%);
+        pointer-events: none;
+        transition: transform 0.5s ease 0s;
+
+        @media (max-width: $mobile) {
+            right: 22px;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        min-width: 300px;
+        padding: 4px 45px 4px 20px;
+    }
+
+    &:hover {
+        background-color: $color-select-activ;
+    }
+
+    &:focus,
+    &.active {
+        outline: none;
+        box-shadow: none;
+        background-color: $color-select-activ;
+    }
+
+    &.active {
+        &::after {
+            transform: translateY(-50%) rotateX(180deg);
+            background-image: url(assets/svg/arrows.svg#ar-select-open);
+        }
+    }
+}
+
+.contacts__select-list {
+    padding: 27px 26px;
+    background-color: #dce9d8;
+    color: $color-primary;
+}
+
+.contacts__select-item {
+    margin: 0px 0px 7px 0px;
+    line-height: 2.5;
+    border-bottom: 1px solid #d9d9d9;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    &:hover {
+        color: #7e807f;
+        border-color: $light-gray;
+    }
+}
+
+.contacts__list {
+    display: inline-flex;
+    justify-content: start;
+    flex-wrap: nowrap;
+    list-style: none;
+    min-width: 448px;
+    min-height: 215px;
+    overflow: hidden;
+
+    @media (max-width: $mobile) {
+        min-width: 282px;
+    }
+}
+
+.contacts__item {
+    flex: 0 0 100%;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0s ease-in 0s;
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.9s ease-in 0s;
+    }
+}

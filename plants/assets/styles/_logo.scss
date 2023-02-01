@@ -1,0 +1,28 @@
+.logo {}
+
+.logo__link {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo__icon {
+    display: block;
+
+    svg {}
+}
+
+.logo__name {
+    display: block;
+    font-family: 'Inika', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    color: $font-color-dark;
+    transition: color 0.2s ease 0s;
+
+    .logo__link:hover &{
+        color: $color-link-activ;
+    }
+}

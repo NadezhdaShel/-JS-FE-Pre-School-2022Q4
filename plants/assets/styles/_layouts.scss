@@ -1,0 +1,13 @@
+.wrapper {
+  max-width: $max-desktop;
+  margin: 0 auto;
+  padding: 0 calc((#{$max-desktop} - #{$max-width-content}) / 2);
+
+  @media (max-width: $tablet) {
+    padding: 0 50px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 0 25px;
+  }
+}

@@ -1,0 +1,51 @@
+$green: #499a18;
+$orange: #e06733;
+$light-gray: #717171;
+$gray: #636060;
+$light-green: #edf2ec;
+$dark-green: #010201;
+$dark: #000000;
+$light: #ffffff;
+$green1: #D6E7D2;
+$green2: #c1e698;
+$green3: #EDF2EC;
+
+//Font Color
+$font-color-primary: $light-gray;
+$font-color-secondary: $gray;
+$font-color-dark: $dark;
+
+//base color
+$color-primary: $green;
+$color-secondary: $orange;
+
+$color-accord: $green3;
+$color-accord-activ: $green1;
+
+$color-select: $green1;
+$color-select-activ: $green2;
+
+$color-bg-section: $light-green;
+
+$color-link-nav: $dark-green;
+$color-link-activ: $orange;
+
+$color-button-hover: $orange;
+
+//max-width-content
+$max-width-content: 1220px;
+$max-desktop: 1440px;
+
+//Breack point menu
+$bp-menu: 599px;
+
+//Breack points
+//1440 desktop
+$small-desktop: 1219px; //1220
+$tablet-landscape: 1023px; //1024
+$tablet: 899px; //900*tablet
+$tablet-point: 768px;//768 tablet
+$tablet1: 720px;//
+$tablet-small: 700px;
+$mobile: 599px; //600 *mobile
+//380 mobile

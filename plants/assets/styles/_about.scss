@@ -1,0 +1,83 @@
+.about {}
+
+.about__wrapper {
+    padding-top: 100px;
+    padding-bottom: 90px;
+    @media (max-width: $tablet) {
+        padding-top: 40px;
+        padding-bottom: 95px;
+    }
+    @media (max-width: $mobile) {
+        padding-top: 30px;
+        padding-bottom: 26px;
+    }
+}
+.about__image {
+    flex: 0 0 50%;
+    background-repeat: no-repeat;
+    background-image: url(assets/img/houseplant.png);
+    background-position: right center;
+    // background-size: 76% auto;
+    background-origin: content-box;
+    
+    @media (max-width: $small-desktop) {
+        background-size: 76% auto;
+    }
+
+    @media (max-width: $tablet) {
+        padding-top: 38%;
+        background-position: bottom center;
+        background-size: 37.5% auto;
+    }
+    
+    @media (max-width: $mobile) {
+        padding-top: 45%;
+        background-size: 45.4% auto;
+    }
+}
+.about__content {
+    display: flex;
+    @media (max-width: $tablet) {
+        display: block;
+    }
+}
+
+.about__article {
+    flex: 0 1 50%;
+    padding: 60px 0px;
+    @media (max-width: $tablet) {
+        padding: 0;
+        margin: 0px 0px 75px 0px;
+    }
+    @media (max-width: $mobile) {
+        margin: 0px 0px 5px 0px;
+    }
+}
+
+.about__title {
+    margin: 0px 0px 40px 0px;
+    @media (max-width: $tablet) {
+        margin: 0px 0px 51px 0px;
+        text-align: center;
+        font-size: 3.5rem;
+    }
+    @media (max-width: $mobile) {
+        margin: 0px 0px 15px 0px;
+        font-size: 2.5rem;
+    }
+}
+
+.about__text {
+    font-size: 2.0rem;
+    line-height: 1.5;
+    color: $font-color-secondary;
+
+    @media (max-width: $mobile) {
+        font-size: 1.5rem;
+        line-height: 1.67;
+    }
+}
+
+.about__active {}
+
+.about__button {}
