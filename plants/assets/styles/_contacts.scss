@@ -96,12 +96,14 @@
         height: 16px;
         content: '';
         display: inline-block;
-        background-image: url(assets/svg/arrows.svg#ar-select-close);
+        background-color: #AEA1A1;
+        background-image: url(assets/svg/arrows.svg#arrow-light);
         background-repeat: no-repeat;
         background-position: center;
         transform: translateY(-50%);
+        border-radius: 50%;
         pointer-events: none;
-        transition: transform 0.5s ease 0s;
+        transition: transform 0.4s ease-out, background-color 0.4s ease-out;
 
         @media (max-width: $mobile) {
             right: 22px;
@@ -126,8 +128,8 @@
 
     &.active {
         &::after {
-            transform: translateY(-50%) rotateX(180deg);
-            background-image: url(assets/svg/arrows.svg#ar-select-open);
+            background-color: #8BA07E;
+            transform: translateY(-50%) rotateZ(180deg);
         }
     }
 }
