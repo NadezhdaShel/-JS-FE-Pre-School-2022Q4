@@ -133,7 +133,9 @@
     }
 
     &:hover {
-        background-color: $color-accord-activ;
+        @media (hover: hover) and (pointer: fine) {
+            background-color: $color-accord-activ;
+        }
     }
 
     &[open] {
