@@ -486,9 +486,11 @@ h2 b {
   color: #717171;
   border-radius: 5px;
 }
-.button:not([disabled]):hover {
-  background-color: #e06733;
-  color: #ffffff;
+@media (hover: hover) and (pointer: fine) {
+  .button:not([disabled]):hover {
+    background-color: #e06733;
+    color: #ffffff;
+  }
 }
 
 .button-start {
@@ -509,9 +511,11 @@ h2 b {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
-.button-start:hover {
-  border-color: #e06733;
-  color: #e06733;
+@media (hover: hover) and (pointer: fine) {
+  .button-start:hover {
+    border-color: #e06733;
+    color: #e06733;
+  }
 }
 
 .social__list {
@@ -1518,8 +1522,11 @@ h2 b {
   margin: 0px 0px 32px 0px;
   overflow: hidden;
   text-align: left;
-  background: #EDF2EC;
+  background-color: #EDF2EC;
   border-radius: 20px;
+  -webkit-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
 }
 @media (max-width: 599px) {
   .prices__item {
@@ -1530,11 +1537,13 @@ h2 b {
 .prices__item:last-child {
   margin: 0;
 }
-.prices__item:hover {
-  background: #D6E7D2;
+@media (hover: hover) and (pointer: fine) {
+  .prices__item:hover {
+    background-color: #D6E7D2;
+  }
 }
 .prices__item[open] {
-  background: #D6E7D2;
+  background-color: #D6E7D2;
 }
 
 details summary::-webkit-details-marker {
@@ -1712,7 +1721,7 @@ details[open] .prices__category::after {
 }
 
 .contacts__wrapper {
-  min-height: 557px;
+  min-height: 550px;
   padding-top: 60px;
   background-image: url(assets/img/contact_woman.png);
   background-repeat: no-repeat;
