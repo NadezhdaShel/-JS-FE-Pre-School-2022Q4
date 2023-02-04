@@ -1518,8 +1518,11 @@ h2 b {
   margin: 0px 0px 32px 0px;
   overflow: hidden;
   text-align: left;
-  background: #EDF2EC;
+  background-color: #EDF2EC;
   border-radius: 20px;
+  -webkit-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
 }
 @media (max-width: 599px) {
   .prices__item {
@@ -1531,10 +1534,10 @@ h2 b {
   margin: 0;
 }
 .prices__item:hover {
-  background: #D6E7D2;
+  background-color: #D6E7D2;
 }
 .prices__item[open] {
-  background: #D6E7D2;
+  background-color: #D6E7D2;
 }
 
 details summary::-webkit-details-marker {
