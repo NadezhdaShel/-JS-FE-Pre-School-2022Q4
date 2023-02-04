@@ -61,6 +61,7 @@ class Select {
         this.class_active = this.setting.class_active;
         this.sectionAnim = document.querySelector(this.setting.sectionAnim);
         this.class_open_card = this.setting.class_open_card;
+        this.isActive = false;
 
         this.addEventListeners();
     }
@@ -68,6 +69,7 @@ class Select {
     clickSelect() {
         this.sel.selectList.classList.toggle(this.class_active);
         this.sel.button.classList.toggle(this.class_active);
+        this.isActive = !this.isActive;
     }
 
     clickItem(event) {
@@ -87,11 +89,13 @@ class Select {
             }
         });
         this.sel.selectList.classList.remove(this.class_active);
+        this.isActive = false;
     }
 
     closeSelect() {
         this.sel.button.classList.remove(this.class_active);
         this.sel.selectList.classList.remove(this.class_active);
+        this.isActive = false;
     }
 
     addEventListeners() {
@@ -108,14 +112,14 @@ class Select {
 
         // Click out. Close select
         document.addEventListener('click', (event) => {
-            if (event.target !== this.sel.button) {
+            if (event.target !== this.sel.button && this.isActive === true) {
                 this.closeSelect();
             }
         });
 
         // Press Tab or Escape. Close select
         document.addEventListener('keydown', (event) => {
-            if (event.key === 'Tab' || event.key === 'Escape') {
+            if ((event.key === 'Tab' || event.key === 'Escape') && this.isActive === true) {
                 this.closeSelect();
             }
         });

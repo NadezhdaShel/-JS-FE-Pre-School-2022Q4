@@ -1824,18 +1824,20 @@ details[open] .prices__category::after {
   height: 16px;
   content: "";
   display: inline-block;
-  background-image: url(assets/svg/arrows.svg#ar-select-close);
+  background-color: #AEA1A1;
+  background-image: url(assets/svg/arrows.svg#arrow-light);
   background-repeat: no-repeat;
   background-position: center;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+  border-radius: 50%;
   pointer-events: none;
-  -webkit-transition: -webkit-transform 0.5s ease 0s;
-  transition: -webkit-transform 0.5s ease 0s;
-  -o-transition: transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+  -webkit-transition: background-color 0.4s ease-out, -webkit-transform 0.4s ease-out;
+  transition: background-color 0.4s ease-out, -webkit-transform 0.4s ease-out;
+  -o-transition: transform 0.4s ease-out, background-color 0.4s ease-out;
+  transition: transform 0.4s ease-out, background-color 0.4s ease-out;
+  transition: transform 0.4s ease-out, background-color 0.4s ease-out, -webkit-transform 0.4s ease-out;
 }
 @media (max-width: 599px) {
   .contacts__select::after {
@@ -1858,9 +1860,10 @@ details[open] .prices__category::after {
   background-color: #c1e698;
 }
 .contacts__select.active::after {
-  -webkit-transform: translateY(-50%) rotateX(180deg);
-          transform: translateY(-50%) rotateX(180deg);
-  background-image: url(assets/svg/arrows.svg#ar-select-open);
+  background-color: #8BA07E;
+  -webkit-transform: translateY(-50%) rotateZ(180deg);
+      -ms-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotateZ(180deg);
 }
 
 .contacts__select-list {
