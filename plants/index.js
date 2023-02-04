@@ -61,6 +61,7 @@ class Select {
         this.class_active = this.setting.class_active;
         this.sectionAnim = document.querySelector(this.setting.sectionAnim);
         this.class_open_card = this.setting.class_open_card;
+        this.isActive = false;
 
         this.addEventListeners();
     }
@@ -68,6 +69,7 @@ class Select {
     clickSelect() {
         this.sel.selectList.classList.toggle(this.class_active);
         this.sel.button.classList.toggle(this.class_active);
+        this.isActive = !this.isActive;
     }
 
     clickItem(event) {
@@ -87,11 +89,13 @@ class Select {
             }
         });
         this.sel.selectList.classList.remove(this.class_active);
+        this.isActive = false;
     }
 
     closeSelect() {
         this.sel.button.classList.remove(this.class_active);
         this.sel.selectList.classList.remove(this.class_active);
+        this.isActive = false;
     }
 
     addEventListeners() {
@@ -108,14 +112,14 @@ class Select {
 
         // Click out. Close select
         document.addEventListener('click', (event) => {
-            if (event.target !== this.sel.button) {
+            if (event.target !== this.sel.button && this.isActive === true) {
                 this.closeSelect();
             }
         });
 
         // Press Tab or Escape. Close select
         document.addEventListener('keydown', (event) => {
-            if (event.key === 'Tab' || event.key === 'Escape') {
+            if ((event.key === 'Tab' || event.key === 'Escape') && this.isActive === true) {
                 this.closeSelect();
             }
         });
@@ -127,25 +131,67 @@ class detailsAccordion {
         this.setting = setting;
         this.accordion = document.querySelector(this.setting.accordion);
         if (this.accordion === null) { return; }
-        this.items = this.accordion.querySelectorAll("details");
+        this.summary = this.accordion.querySelectorAll("summary");
+        this.item = {
+            details: null,
+            summary: null,
+            content: null,
+        }
+        this.animation = null;
         this.addEventListeners();
     }
 
-    onToggle(event) {
-        if (event.target.open) {
-            this.accordion.querySelectorAll("details[open]").forEach(elem => {
-                if (elem === event.target) {
-                    return;
-                }
-                elem.open = false;
-            });
+    onClick(event) {
+        event.preventDefault();
+        if (this.item.summary !== null && this.item.summary !== event.target) {
+            this.onClose();
         }
-    };
-
+        this.item = {
+            summary: event.target,
+            details: event.target.closest('details'),
+        }
+        this.item.content = this.item.details.querySelector(this.setting.content);
+        if (!this.item.details.open) {
+            this.item.details.style.overflow = 'hidden';
+            this.onOpen();
+        } else {
+            this.onClose();
+            this.item = {
+                summary: null,
+                details: null,
+                content: null,
+            }
+        }
+    }
+    onClose() {
+        const startHeight = `${this.item.details.offsetHeight}px`;
+        const endHeight = `${this.item.summary.offsetHeight}px`;
+        this.createAnimation(startHeight, endHeight);
+        this.item.details.open = false;
+        this.animation = null;
+    }
+    createAnimation(startHeight, endHeight) {
+        this.animation = this.item.details.animate({
+            height: [startHeight, endHeight],
+        },
+            {
+                duration: 400,
+                easing: 'ease-out',
+            })
+    }
+    onOpen() {
+        this.item.details.style.height = `${this.item.details.offsetHeight}px`;
+        this.item.details.open = true;
+        const startHeight = `${this.item.details.offsetHeight}px`;
+        const endHeight = `${this.item.summary.offsetHeight + this.item.content.offsetHeight}px`;
+        this.createAnimation(startHeight, endHeight);
+        this.animation = null;
+        this.item.details.style.height = '';
+    }
     addEventListeners() {
-        this.items.forEach(element => {
-            element.addEventListener("toggle", (event) => {
-                this.onToggle(event);
+        this.summary.forEach(element => {
+            element.addEventListener("click", (event) => {
+                this.onClick(event);
             })
         });
     }
@@ -269,6 +315,7 @@ new buttonLinkAnchor({
 
 new detailsAccordion({
     "accordion": ".accordion",
+    "content": ".prices__info",
 })
 
 new Filter({
