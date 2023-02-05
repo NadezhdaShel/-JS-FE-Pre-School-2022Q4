@@ -6,6 +6,8 @@
   font-family: 'Inika', serif;
   border: 1px solid $color-button-hover;
   background-color: transparent;
+  -webkit-tap-highlight-color: rgba(225, 225, 225, 0);
+  -webkit-tap-highlight-color: transparent;
   transition: all 0.3s ease 0s;
 
   &_small {
