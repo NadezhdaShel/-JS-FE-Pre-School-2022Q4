@@ -180,6 +180,8 @@ details[open] summary~.prices__info {
     line-height: 1;
     color: $font-color-dark;
     border-radius: 20px;
+    -webkit-tap-highlight-color: rgba(225, 225, 225, 0);
+    -webkit-tap-highlight-color: transparent;
 
     &::before {
         position: absolute;
