@@ -1,5 +1,5 @@
 const nameUser = document.querySelector('.name');
-const city = document.querySelector('.city') || 'Minsk';
+const city = document.querySelector('.city');
 
 function setLocalStorage() {
     localStorage.setItem('name', nameUser.value);
@@ -16,4 +16,9 @@ function getLocalStorage() {
     }
 }
 
-export { setLocalStorage, getLocalStorage }
+function addStorage() {
+    window.addEventListener('beforeunload', setLocalStorage);
+    window.addEventListener('load', getLocalStorage);
+}
+
+export default addStorage;

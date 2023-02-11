@@ -1,6 +1,6 @@
 import { getTimeOfDay } from './general.js'
 
-let randomNum = 0;
+let randomNum = 1;
 const slideNext = document.querySelector('.slide-next');
 const slidePrev = document.querySelector('.slide-prev');
 
@@ -38,7 +38,7 @@ function getSlidePrev() {
     setBg();
 }
 
-getRandomNum(0, 9);
+getRandomNum(1, 10);
 slideNext.addEventListener('click', getSlideNext);
 slidePrev.addEventListener('click', getSlidePrev);
 
