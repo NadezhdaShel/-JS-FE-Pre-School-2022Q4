@@ -13,12 +13,28 @@
 <body>
   <header class="header">
     <div class="player">
+      <audio src=""></audio>
       <div class="player-controls">
+        <button class="play-sound player-icon"></button>
         <button class="play-prev player-icon"></button>
         <button class="play player-icon"></button>
         <button class="play-next player-icon"></button>
+        <button class="play-volume player-icon"></button>
+        <div class="volume">
+          <input class="volume-scale" type="range" id="rangeVolume" value="50" max="100">
+        </div>
       </div>
-      <ul class="play-list"></ul>
+      <div class="play-progress-bar">
+        <div class="play-title">Title</div>
+        <span class="play-current">00:00</span>
+        <progress class="play-progress" id="playerRange" max="100" value="0">
+        </progress>
+        <span class="play-duration">00:00</span>
+      </div>
+      <div>
+        <button class="play-list-open player-icon"></button>
+        <ul class="play-list"></ul>
+      </div>
     </div>
     <div class="weather">
       <input type="text" class="city" placeholder="Minsk" title="Enter you city" />
