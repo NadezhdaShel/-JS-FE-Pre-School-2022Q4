@@ -1,5 +1,7 @@
-// import './index.html';
-// import './css/style.css'
+import './index.html';
+import './css/owfont-regular.css';
+import './css/style.css';
+
 import showTime from './js/time.js';
 import addStorage from './js/personal.js';
 import setBg from './js/slider.js';
@@ -8,8 +10,8 @@ import addWeather from './js/weather.js';
 import audioPlayer from './js/audio.js';
 
 addStorage();
-// addWeather();
-// showTime();
-// setBg();
-// getQuotes();
+addWeather();
+showTime();
+setBg();
+getQuotes();
 audioPlayer();
