@@ -14,6 +14,7 @@ const playTitle = document.querySelector('.play-title');
 const volume = document.querySelector('.volume');
 const volumeRange = document.querySelector('.volume-scale');
 const playListBtn = document.querySelector('.play-list-open');
+const playerError = document.querySelector('.player-error');
 
 let isPlay = false;
 let playNum;
@@ -46,6 +47,7 @@ function toggleBtn() {
 }
 
 function playAudio() {
+    playerError.textContent = '';
     audio.src = playList[playNum].src;
     audio.currentTime = 0;
     audio.play();
@@ -194,8 +196,28 @@ playListContainer.addEventListener('click', function (event) {
 
 //Error
 audio.addEventListener('error', function (event) {
-    playTitle.textContent = 'File not loaded';
-    console.log('Error');
+    let str = '';
+    const err = audio.error;
+    switch (err.code) {
+        case MediaError.MEDIA_ERR_ABORTED:
+            str += "The user canceled the audio"
+            break;
+        case MediaError.MEDIA_ERR_NETWORK:
+            str += "A network error"
+            break;
+        case MediaError.MEDIA_ERR_DECODE:
+            str += "An error occurred while decoding the audio"
+            break;
+        case MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED:
+            str += "The audio is missing";
+            break;
+        default:
+            str += "An unknown error occurred";
+            break;
+    }
+    if (str.length > 0) {
+        playerError.textContent = str;
+    }
 });
 
 
