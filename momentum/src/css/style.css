@@ -269,8 +269,6 @@ body {
 
 .play-progress-bar {
   margin-bottom: 10px;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.1);
 }
 
 .play-progress {

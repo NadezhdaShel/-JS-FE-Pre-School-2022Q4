@@ -2,14 +2,18 @@ import './index.html';
 import './css/owfont-regular.css';
 import './css/style.css';
 
+import { setLocalStorage, getLocalStorage } from './js/personal.js';
 import showTime from './js/time.js';
-import addStorage from './js/personal.js';
 import setBg from './js/slider.js';
 import getQuotes from './js/quote.js';
 import addWeather from './js/weather.js';
 import audioPlayer from './js/audio.js';
+import addSettings from './js/settings';
 
-addStorage();
+window.addEventListener('beforeunload', setLocalStorage);
+window.addEventListener('load', getLocalStorage);
+
+addSettings();
 addWeather();
 showTime();
 setBg();
