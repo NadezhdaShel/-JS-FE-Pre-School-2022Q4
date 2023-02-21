@@ -1,3 +1,5 @@
+import { toggleVisibleBlock } from "./settings.js";
+
 const nameUser = document.querySelector('.name');
 const city = document.querySelector('.city') || 'Minsk';
 const playList = document.querySelector('.play-list');
@@ -58,7 +60,8 @@ function getLocalStorage() {
     if (localStorage.getItem('options')) {
         options = JSON.parse(localStorage.getItem('options'));
         setOptions();
+        toggleVisibleBlock();
     }
 }
 
-export { setLocalStorage, getLocalStorage }
+export { setLocalStorage, getLocalStorage, options }
