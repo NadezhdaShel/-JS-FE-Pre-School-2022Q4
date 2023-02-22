@@ -2,6 +2,7 @@ import playList from './playList.js';
 
 const playListContainer = document.querySelector('.play-list');
 const audio = document.querySelector('audio');
+const player = document.querySelector('.player');
 const prevBtn = document.querySelector('.play-prev');
 const playBtn = document.querySelector('.play');
 const nextBtn = document.querySelector('.play-next');
@@ -15,6 +16,7 @@ const volume = document.querySelector('.volume');
 const volumeRange = document.querySelector('.volume-scale');
 const playListBtn = document.querySelector('.play-list-open');
 const playerError = document.querySelector('.player-error');
+const playerOpenBtn = document.querySelector('.player-btn');
 
 let isPlay = false;
 let playNum;
@@ -169,6 +171,10 @@ function togglePlayList() {
     playListBtn.classList.toggle('close');
 }
 
+function togglePlayer() {
+    player.classList.toggle('open');
+}
+
 //On load
 function audioPlayer() {
     window.addEventListener('load', function () {
@@ -179,6 +185,7 @@ function audioPlayer() {
 }
 
 //Event
+playerOpenBtn.addEventListener('click', togglePlayer);
 nextBtn.addEventListener('click', onNextClick);
 prevBtn.addEventListener('click', onPrevClick);
 playBtn.addEventListener('click', onPlayBtnClick);

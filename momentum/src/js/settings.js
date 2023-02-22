@@ -1,6 +1,7 @@
 import createPage from "../index.js";
 import { setLocalStorage, options } from "./personal.js";
 import ruleTranslation from "./translation.js";
+import addWeather from "./weather.js";
 
 const closeBtn = document.querySelector('.settings-close');
 const settings = document.querySelector('.settings');
@@ -9,6 +10,9 @@ const blocksGroup = document.querySelector('.elements-group');
 const languageGroup = document.querySelector('.language-group');
 const elementsTitle = document.querySelector('.elements-title');
 const elementsLabel = document.querySelectorAll('.elements-label');
+const copyright = document.querySelector('.copyright-name');
+const userName = document.querySelector('.name');
+const city = document.querySelector('.city');
 
 const blocksContent = ['time', 'date', 'greeting', 'quote', 'weather', 'audio'];
 
@@ -35,6 +39,9 @@ function addSettings() {
         elem.textContent = ruleTranslation.elementsLabel[language][index];
     })
     closeBtn.textContent = ruleTranslation.closeBtn[language];
+    copyright.textContent = ruleTranslation.copyright[language];
+    userName.placeholder = ruleTranslation.userName[language];
+    city.placeholder = ruleTranslation.city[language];
 }
 
 closeBtn.addEventListener('click', toggleSettings);

@@ -1,4 +1,5 @@
 import showGreeting from './greeting.js';
+import { options } from "./personal.js";
 
 const time = document.querySelector('.time');
 const dateBlock = document.querySelector('.date');
@@ -14,9 +15,11 @@ function showTime() {
 
 
 function showDate() {
+    let language = options.language;
+    let languageUpper = language.replace(/^./i, (e) => e.toUpperCase())
     const date = new Date();
-    const options = { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' };
-    const currentDate = date.toLocaleDateString('en-En', options);
+    const opt = { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' };
+    let currentDate = date.toLocaleDateString(`${language}-${languageUpper}`, opt);
     dateBlock.textContent = currentDate;
 }
 
