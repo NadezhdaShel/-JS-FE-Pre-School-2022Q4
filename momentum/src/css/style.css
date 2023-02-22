@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Arial-MT';
-  src: url("../assets/fonts/Arial-MT.woff"); 
- }
+  src: url("../assets/fonts/Arial-MT.woff");
+}
 
 * {
   box-sizing: border-box;
@@ -10,7 +10,7 @@
 }
 
 body {
-  min-width: 480px;
+  min-width: 320px;
   min-height: 100vh;
   font-family: 'Arial', sans-serif;
   font-size: 16px;
@@ -28,6 +28,7 @@ body {
   position: relative;
   overflow: hidden;
   width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   text-align: center;
 }
@@ -116,7 +117,7 @@ body {
 }
 
 .play-item::before {
-  content: "\2713";  
+  content: "\2713";
   position: absolute;
   left: 0;
   top: 2px;
@@ -142,7 +143,7 @@ body {
   outline: 0;
   opacity: 0.8;
   cursor: pointer;
-  transition: 0.3s;  
+  transition: 0.3s;
 }
 
 .player-icon:hover,
@@ -159,7 +160,7 @@ body {
 .settings-icon:active,
 .item-button:active {
   border: 0;
-  outline: 0;  
+  outline: 0;
   transform: scale(1.1);
 }
 
@@ -300,6 +301,31 @@ body {
   font-size: 0.75rem;
 }
 
+.player-btn {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  height: 45px;
+  background-size: 25px 25px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url("../assets/svg/audio.svg");
+  border-radius: 0 0px 10px 0;
+  border: 0;
+  outline: 0;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  transform: translateX(100%);
+}
+
+.player-btn:hover {
+  opacity: 1;
+}
+
 .weather {
   display: flex;
   flex-direction: column;
@@ -307,7 +333,7 @@ body {
   align-items: flex-start;
   row-gap: 5px;
   width: 180px;
-  min-height: 180px;  
+  min-height: 180px;
   text-align: left;
 }
 
@@ -333,14 +359,14 @@ body {
   padding: 5px;
   font-size: 20px;
   line-height: 24px;
-  color: #fff;  
+  color: #fff;
   border: 0;
   outline: 0;
   border-bottom: 1px solid #fff;
   background-color: transparent;
 }
 
-.city::placeholder {  
+.city::placeholder {
   font-size: 20px;
   color: #fff;
   opacity: 0.6;
@@ -353,8 +379,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 40vh;
-  min-height: 260px;  
+  min-height: 40vh;
   padding: 20px;
 }
 
@@ -380,7 +405,7 @@ body {
   margin-bottom: 10px;
   font-family: 'Arial-MT';
   font-size: 100px;
-  letter-spacing: -4px;  
+  letter-spacing: -4px;
 }
 
 .date {
@@ -400,8 +425,9 @@ body {
 }
 
 .greeting {
-  flex: 1;  
+  flex: 1;
   padding: 10px;
+  white-space: nowrap;
   text-align: right;
 }
 
@@ -428,14 +454,13 @@ body {
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  height: 30vh;
-  min-height: 160px;  
+  min-height: 30vh;
   padding: 20px;
 }
 
 .change-quote {
   margin-bottom: 30px;
-  background-image: url("../assets/svg/reload.svg");  
+  background-image: url("../assets/svg/reload.svg");
 }
 
 .quote {
@@ -518,6 +543,7 @@ body {
   opacity: 0;
   padding: 30px;
   font-size: 16px;
+  border-radius: 10px 0 0 0;
   background-color: rgba(0, 0, 0, 0.8);
   will-change: transform;
   transform: translateX(100%);
@@ -661,7 +687,7 @@ body {
 @media (max-width: 768px) {
   .time {
     min-height: 80px;
-    font-size: 72px;    
+    font-size: 72px;
   }
 
   .greeting-container {
@@ -676,5 +702,78 @@ body {
   .name {
     font-size: 32px;
     padding: 5px;
+  }
+
+  .header {
+    justify-content: flex-end;
+  }
+
+  .player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0;
+    width: 280px;
+    padding: 35px 15px 15px;
+    border-radius: 0 0 10px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    will-change: transform;
+    transform: translateX(-100%);
+  }
+
+  #audio {
+    transition: transform 0.5s ease 0s;
+  }
+
+  .player.open {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  .play-list-open {
+    display: none;
+  }
+
+  .player-btn {
+    display: block;
+  }
+
+  .change-quote {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .time {
+    min-height: 70px;
+    font-size: 62px;
+  }
+
+  .greeting-container {
+    display: block;
+    text-align: center;
+    min-height: 35px;
+    font-size: 28px;
+  }
+
+  .greeting {
+    font-size: 26px;
+  }
+
+  .name {
+    font-size: 32px;
+    padding: 5px;
+  }
+
+  .change-quote {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 15px;
+    background-size: 100% 100%;
+  }
+
+  .copyright-name {
+    display: none;
   }
 }

@@ -1,3 +1,6 @@
+import ruleTranslation from "./translation.js";
+import { options } from "./personal.js";
+
 const weatherIcon = document.querySelector('.weather-icon');
 const temperature = document.querySelector('.temperature');
 const weatherDescription = document.querySelector('.weather-description');
@@ -8,13 +11,16 @@ const weatherError = document.querySelector('.weather-error');
 
 
 async function getWeather(cityValue) {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&lang=ru&appid=ce9410a5a39fcf35d3318c0e8aa32535&units=metric`;
+    let language = options.language;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&lang=${language}&appid=ce9410a5a39fcf35d3318c0e8aa32535&units=metric`;
     const res = await fetch(url);
     const data = await res.json();
     try {
+        const tempUnit = ruleTranslation.temp[language];
+        const windUnit = ruleTranslation.wind[language];
         weatherIcon.classList.add(`owf-${data.weather[0].id}`);
-        temperature.textContent = `${Math.round(data.main.temp)} °C`;
-        wind.textContent = `${Math.round(data.wind.speed)} m/s`;
+        temperature.textContent = `${Math.round(data.main.temp)} ${tempUnit}`;
+        wind.textContent = `${Math.round(data.wind.speed)} ${windUnit}`;
         humidity.textContent = `${Math.round(data.main.humidity)} %`;
         weatherDescription.textContent = data.weather[0].description;
 
@@ -36,17 +42,14 @@ function clearWeather() {
 }
 
 function addWeather() {
-    window.addEventListener('load', function () {
-        const cityValue = localStorage.getItem('city') || 'Minsk';
-        getWeather(cityValue);
-    });
-
-    city.addEventListener('change', function () {
-        const cityValue = city.value || 'Minsk';
-        clearWeather();
-        getWeather(cityValue);
-    });
+    const cityValue = localStorage.getItem('city') || 'Minsk';
+    getWeather(cityValue);
 }
 
+city.addEventListener('change', function () {
+    const cityValue = city.value || 'Minsk';
+    clearWeather();
+    getWeather(cityValue);
+});
 
 export default addWeather;
