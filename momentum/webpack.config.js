@@ -84,14 +84,14 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].css',
         }),
-        new CopyPlugin({
-            patterns: [
-                {
-                    from: "data.json",
-                    to: 'assets/',
-                }
-            ],
-        }),
+        // new CopyPlugin({
+        //     patterns: [
+        //         {
+        //             from: "data.json",
+        //             to: 'assets/',
+        //         }
+        //     ],
+        // }),
     ],
     // optimization: {
     //     minimize: true
