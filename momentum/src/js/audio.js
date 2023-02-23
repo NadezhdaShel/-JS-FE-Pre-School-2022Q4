@@ -181,6 +181,7 @@ function audioPlayer() {
         playNum = 0;
         audio.src = playList[playNum].src;
         audio.currentTime = 0;
+        playTitle.textContent = playList[playNum].title;
     });
 }
 
