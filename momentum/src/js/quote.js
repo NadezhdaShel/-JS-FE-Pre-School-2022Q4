@@ -7,7 +7,7 @@ const changeQuoteButton = document.querySelector('.change-quote');
 
 async function getQuotes() {
     let language = options.language;
-    const quotes = 'https://github.com/NadezhdaShel/momentum/blob/main/data.json';
+    const quotes = 'data.json';
     const res = await fetch(quotes);
     const data = await res.json();
     const maxNumber = data.length;
