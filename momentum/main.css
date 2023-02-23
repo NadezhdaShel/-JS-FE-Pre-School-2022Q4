@@ -1,0 +1,1392 @@
+/*!*********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/css/owfont-regular.css ***!
+  \*********************************************************************************************************************/
+/*!
+ *  owfont-regular 1.0.0 by Deniz Fuchidzhiev - http://websygen.com
+ *  License - font: SIL OFL 1.1, css: MIT License
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: "owfont";
+  src: url(fonts/owfont-regular.eot);
+  src: url(fonts/owfont-regular.eot?#iefix&v=1.0.0) format("embedded-opentype"), url(fonts/owfont-regular.woff) format("woff"), url(fonts/owfont-regular.ttf) format("truetype"), url(assets/svg/owfont-regular.svg#owf-regular) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.owf {
+  display: inline-block;
+  font: normal normal normal 14px/1 owfont;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
+/* makes the font 33% larger relative to the icon container */
+.owf-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+
+.owf-2x {
+  font-size: 2em;
+}
+
+.owf-3x {
+  font-size: 3em;
+}
+
+.owf-4x {
+  font-size: 4em;
+}
+
+.owf-5x {
+  font-size: 5em;
+}
+
+.owf-fw {
+  width: 1.28571429em;
+  text-align: center;
+}
+
+.owf-ul {
+  padding-left: 0;
+  margin-left: 2.14285714em;
+  list-style-type: none;
+}
+
+.owf-ul > li {
+  position: relative;
+}
+
+.owf-li {
+  position: absolute;
+  left: -2.14285714em;
+  width: 2.14285714em;
+  top: 0.14285714em;
+  text-align: center;
+}
+
+.owf-li.owf-lg {
+  left: -1.85714286em;
+}
+
+.owf-border {
+  padding: 0.2em 0.25em 0.15em;
+  border: solid 0.08em #eeeeee;
+  border-radius: 0.1em;
+}
+
+.owf-pull-right {
+  float: right;
+}
+
+.owf-pull-left {
+  float: left;
+}
+
+.owf.owf-pull-left {
+  margin-right: 0.3em;
+}
+
+.owf.owf-pull-right {
+  margin-left: 0.3em;
+}
+
+/* owfont uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+/*   Weather Condition Codes    */
+/*   Thunderstorm - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+/* thunderstorm with light rain */
+.owf-200:before,
+.owf-200-d:before,
+.owf-200-n:before {
+  content: "\eb28";
+}
+
+/* thunderstorm with rain */
+.owf-201:before,
+.owf-201-d:before,
+.owf-201-n:before {
+  content: "\eb29";
+}
+
+/* thunderstorm with heavy rain */
+.owf-202:before,
+.owf-202-d:before,
+.owf-202-n:before {
+  content: "\eb2a";
+}
+
+/*  light thunderstorm  */
+.owf-210:before,
+.owf-210-d:before,
+.owf-210-n:before {
+  content: "\eb32";
+}
+
+/*  thunderstorm  */
+.owf-211:before,
+.owf-211-d:before,
+.owf-211-n:before {
+  content: "\eb33";
+}
+
+/*   heavy thunderstorm   */
+.owf-212:before,
+.owf-212-d:before,
+.owf-212-n:before {
+  content: "\eb34";
+}
+
+/*   ragged thunderstorm   */
+.owf-221:before,
+.owf-221-d:before,
+.owf-221-n:before {
+  content: "\eb3d";
+}
+
+/*  thunderstorm with light drizzle    */
+.owf-230:before,
+.owf-230-d:before,
+.owf-230-n:before {
+  content: "\eb46";
+}
+
+/*  thunderstorm with drizzle     */
+.owf-231:before,
+.owf-231-d:before,
+.owf-231-n:before {
+  content: "\eb47";
+}
+
+/* thunderstorm with heavy drizzle     */
+.owf-232:before,
+.owf-232-d:before,
+.owf-232-n:before {
+  content: "\eb48";
+}
+
+/*   Drizzle - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+/*  light intensity drizzle */
+.owf-300:before,
+.owf-300-d:before,
+.owf-300-n:before {
+  content: "\eb8c";
+}
+
+/*  drizzle */
+.owf-301:before,
+.owf-301-d:before,
+.owf-301-n:before {
+  content: "\eb8d";
+}
+
+/*  heavy intensity drizzle  */
+.owf-302:before,
+.owf-302-d:before,
+.owf-302-n:before {
+  content: "\eb8e";
+}
+
+/*   light intensity drizzle rain  */
+.owf-310:before,
+.owf-310-d:before,
+.owf-310-n:before {
+  content: "\eb96";
+}
+
+/*  drizzle rain  */
+.owf-311:before,
+.owf-311-d:before,
+.owf-311-n:before {
+  content: "\eb97";
+}
+
+/* heavy intensity drizzle rain */
+.owf-312:before,
+.owf-312-d:before,
+.owf-312-n:before {
+  content: "\eb98";
+}
+
+/* shower rain and drizzle  */
+.owf-313:before,
+.owf-313-d:before,
+.owf-313-n:before {
+  content: "\eb99";
+}
+
+/* heavy shower rain and drizzle*/
+.owf-314:before,
+.owf-314-d:before,
+.owf-314-n:before {
+  content: "\eb9a";
+}
+
+/* shower drizzle */
+.owf-321:before,
+.owf-321-d:before,
+.owf-321-n:before {
+  content: "\eba1";
+}
+
+/*   Rain - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+/* light rain  */
+.owf-500:before,
+.owf-500-d:before,
+.owf-500-n:before {
+  content: "\ec54";
+}
+
+/* moderate rain  */
+.owf-501:before,
+.owf-501-d:before,
+.owf-501-n:before {
+  content: "\ec55";
+}
+
+/* heavy intensity rain  */
+.owf-502:before,
+.owf-502-d:before,
+.owf-502-n:before {
+  content: "\ec56";
+}
+
+/* very heavy rain   */
+.owf-503:before,
+.owf-503-d:before,
+.owf-503-n:before {
+  content: "\ec57";
+}
+
+/* extreme rain    */
+.owf-504:before,
+.owf-504-d:before,
+.owf-504-n:before {
+  content: "\ec58";
+}
+
+/* freezing rain    */
+.owf-511:before,
+.owf-511-d:before,
+.owf-511-n:before {
+  content: "\ec5f";
+}
+
+/*  light intensity shower rain    */
+.owf-520:before,
+.owf-520-d:before,
+.owf-520-n:before {
+  content: "\ec68";
+}
+
+/* shower rain  */
+.owf-521:before,
+.owf-521-d:before,
+.owf-521-n:before {
+  content: "\ec69";
+}
+
+/*  heavy intensity shower rain  */
+.owf-522:before,
+.owf-522-d:before,
+.owf-522-n:before {
+  content: "\ec6a";
+}
+
+/* ragged shower rain  */
+.owf-531:before,
+.owf-531-d:before,
+.owf-531-n:before {
+  content: "\ec73";
+}
+
+/*   Snow - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+/* light snow  */
+.owf-600:before,
+.owf-600-d:before,
+.owf-600-n:before {
+  content: "\ecb8";
+}
+
+/*  snow  */
+.owf-601:before,
+.owf-601-d:before,
+.owf-601-n:before {
+  content: "\ecb9";
+}
+
+/*   heavy snow   */
+.owf-602:before,
+.owf-602-d:before,
+.owf-602-n:before {
+  content: "\ecba";
+}
+
+/*  sleet  */
+.owf-611:before,
+.owf-611-d:before,
+.owf-611-n:before {
+  content: "\ecc3";
+}
+
+/*   shower sleet */
+.owf-612:before,
+.owf-612-d:before,
+.owf-612-n:before {
+  content: "\ecc4";
+}
+
+/* light rain and snow */
+.owf-615:before,
+.owf-615-d:before,
+.owf-615-n:before {
+  content: "\ecc7";
+}
+
+/* rain and snow  */
+.owf-616:before,
+.owf-616-d:before,
+.owf-616-n:before {
+  content: "\ecc8";
+}
+
+/* light shower snow  */
+.owf-620:before,
+.owf-620-d:before,
+.owf-620-n:before {
+  content: "\eccc";
+}
+
+/* shower snow  */
+.owf-621:before,
+.owf-621-d:before,
+.owf-621-n:before {
+  content: "\eccd";
+}
+
+/* heavy shower snow  */
+.owf-622:before,
+.owf-622-d:before,
+.owf-622-n:before {
+  content: "\ecce";
+}
+
+/*   Atmosphere - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+/* mist */
+.owf-701:before,
+.owf-701-d:before,
+.owf-701-n:before {
+  content: "\ed1d";
+}
+
+/* smoke */
+.owf-711:before,
+.owf-711-d:before,
+.owf-711-n:before {
+  content: "\ed27";
+}
+
+/* haze */
+.owf-721:before,
+.owf-721-d:before,
+.owf-721-n:before {
+  content: "\ed31";
+}
+
+/* Sand/Dust Whirls */
+.owf-731:before,
+.owf-731-d:before,
+.owf-731-n:before {
+  content: "\ed3b";
+}
+
+/* Fog */
+.owf-741:before,
+.owf-741-d:before,
+.owf-741-n:before {
+  content: "\ed45";
+}
+
+/* sand */
+.owf-751:before,
+.owf-751-d:before,
+.owf-751-n:before {
+  content: "\ed4f";
+}
+
+/* dust */
+.owf-761:before,
+.owf-761-d:before,
+.owf-761-n:before {
+  content: "\ed59";
+}
+
+/*  VOLCANIC ASH  */
+.owf-762:before,
+.owf-762-d:before,
+.owf-762-n:before {
+  content: "\ed5a";
+}
+
+/* SQUALLS */
+.owf-771:before,
+.owf-771-d:before,
+.owf-771-n:before {
+  content: "\ed63";
+}
+
+/* TORNADO */
+.owf-781:before,
+.owf-781-d:before,
+.owf-781-n:before {
+  content: "\ed6d";
+}
+
+/*   Clouds - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+/*  sky is clear  */ /*  Calm  */
+.owf-800:before,
+.owf-800-d:before,
+.owf-951:before,
+.owf-951-d:before {
+  content: "\ed80";
+}
+
+.owf-800-n:before,
+.owf-951-n:before {
+  content: "\f168";
+}
+
+/*  few clouds   */
+.owf-801:before,
+.owf-801-d:before {
+  content: "\ed81";
+}
+
+.owf-801-n:before {
+  content: "\f169";
+}
+
+/* scattered clouds */
+.owf-802:before,
+.owf-802-d:before {
+  content: "\ed82";
+}
+
+.owf-802-n:before {
+  content: "\f16a";
+}
+
+/* broken clouds  */
+.owf-803:before,
+.owf-803-d:before,
+.owf-803-n:before {
+  content: "\ed83";
+}
+
+/* overcast clouds  */
+.owf-804:before,
+.owf-804-d:before,
+.owf-804-n:before {
+  content: "\ed84";
+}
+
+/*   Extreme - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+/* tornado  */
+.owf-900:before,
+.owf-900-d:before,
+.owf-900-n:before {
+  content: "\ede4";
+}
+
+/*  tropical storm  */
+.owf-901:before,
+.owf-901-d:before,
+.owf-901-n:before {
+  content: "\ede5";
+}
+
+/* hurricane */
+.owf-902:before,
+.owf-902-d:before,
+.owf-902-n:before {
+  content: "\ede6";
+}
+
+/* cold */
+.owf-903:before,
+.owf-903-d:before,
+.owf-903-n:before {
+  content: "\ede7";
+}
+
+/* hot */
+.owf-904:before,
+.owf-904-d:before,
+.owf-904-n:before {
+  content: "\ede8";
+}
+
+/* windy */
+.owf-905:before,
+.owf-905-d:before,
+.owf-905-n:before {
+  content: "\ede9";
+}
+
+/* hail */
+.owf-906:before,
+.owf-906-d:before,
+.owf-906-n:before {
+  content: "\edea";
+}
+
+/*   Additional - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+/* Setting */
+.owf-950:before,
+.owf-950-d:before,
+.owf-950-n:before {
+  content: "\ee16";
+}
+
+/*  Light breeze  */
+.owf-952:before,
+.owf-952-d:before,
+.owf-952-n:before {
+  content: "\ee18";
+}
+
+/*  Gentle Breeze  */
+.owf-953:before,
+.owf-953-d:before,
+.owf-953-n:before {
+  content: "\ee19";
+}
+
+/*  Moderate breeze  */
+.owf-954:before,
+.owf-954-d:before,
+.owf-954-n:before {
+  content: "\ee1a";
+}
+
+/* Fresh Breeze  */
+.owf-955:before,
+.owf-955-d:before,
+.owf-955-n:before {
+  content: "\ee1b";
+}
+
+/* Strong  Breeze  */
+.owf-956:before,
+.owf-956-d:before,
+.owf-956-n:before {
+  content: "\ee1c";
+}
+
+/* High wind, near gale  */
+.owf-957:before,
+.owf-957-d:before,
+.owf-957-n:before {
+  content: "\ee1d";
+}
+
+/* Gale */
+.owf-958:before,
+.owf-958-d:before,
+.owf-958-n:before {
+  content: "\ee1e";
+}
+
+/*  Severe Gale  */
+.owf-959:before,
+.owf-959-d:before,
+.owf-959-n:before {
+  content: "\ee1f";
+}
+
+/* Storm */
+.owf-960:before,
+.owf-960-d:before,
+.owf-960-n:before {
+  content: "\ee20";
+}
+
+/*  Violent Storm  */
+.owf-961:before,
+.owf-961-d:before,
+.owf-961-n:before {
+  content: "\ee21";
+}
+
+/* Hurricane */
+.owf-962:before,
+.owf-962-d:before,
+.owf-962-n:before {
+  content: "\ee22";
+}
+/*!************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/css/style.css ***!
+  \************************************************************************************************************/
+@charset "UTF-8";
+@font-face {
+  font-family: "Arial-MT";
+  src: url(fonts/Arial-MT.woff);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  transition: background-image 1s ease-in-out;
+}
+
+.page {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 30vh;
+  min-height: 220px;
+  padding: 20px;
+}
+
+.player {
+  width: 250px;
+}
+
+.player-error {
+  min-height: 1.5em;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgb(235, 146, 146);
+}
+
+.player-controls {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  margin: 0 auto 20px;
+}
+
+.play-list {
+  height: 120px;
+  overflow-y: scroll;
+  padding: 0 10px 0;
+  text-align: left;
+  scrollbar-width: 6px;
+  scrollbar-color: #fff transparent;
+  resize: vertical;
+  opacity: 1;
+  visibility: visible;
+  background: rgba(255, 255, 255, 0.2);
+  /* background: rgba(0, 0, 0, 0.2); */
+  border-radius: 5px;
+  transition: opacity 0.5s linear 0s, visibility 0s linear 0s;
+}
+
+.play-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.play-list::-webkit-scrollbar-track {
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+
+.play-list::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 3px;
+}
+
+.play-list.close {
+  transition: opacity 0.3s linear 0s, visibility 0s linear 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.play-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px 5px 20px;
+  list-style: none;
+  opacity: 0.8;
+  cursor: pointer;
+  transform: translateZ(0);
+  transition: opacity 0.3s;
+}
+
+.play-item:hover {
+  opacity: 1;
+}
+
+.play-item::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-weight: 900;
+}
+
+.item-active::before {
+  color: #C5B358;
+}
+
+.player-icon,
+.slider-icon,
+.change-quote,
+.settings-icon,
+.item-button {
+  width: 32px;
+  height: 32px;
+  background-size: 32px 32px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.player-icon:hover,
+.slider-icon:hover,
+.change-quote:hover,
+.settings-icon:hover,
+.item-button:hover {
+  opacity: 1;
+}
+
+.player-icon:active,
+.slider-icon:active,
+.change-quote:active,
+.settings-icon:active,
+.item-button:active {
+  border: 0;
+  outline: 0;
+  transform: scale(1.1);
+}
+
+.play {
+  width: 40px;
+  height: 40px;
+  background-size: 40px 40px;
+  background-image: url(assets/svg/play.svg);
+}
+
+.pause {
+  background-image: url(assets/svg/pause.svg);
+}
+
+.play-prev {
+  background-image: url(assets/svg/play-prev.svg);
+}
+
+.play-next {
+  background-image: url(assets/svg/play-next.svg);
+}
+
+.play-sound {
+  background-image: url(assets/svg/sound.svg);
+}
+
+.play-soundless {
+  background-image: url(assets/svg/sound-out.svg);
+}
+
+.play-volume {
+  background-image: url(assets/svg/volume.svg);
+}
+
+.item-button {
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+  margin-top: 2px;
+  background-size: 15px 15px;
+  background-image: url(assets/svg/play.svg);
+}
+
+.item-button.pause {
+  background-image: url(assets/svg/pause.svg);
+}
+
+.play-list-open {
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+  background-image: url(assets/svg/down-arrow.svg);
+  transform: rotateX(180deg);
+}
+
+.play-list-open.close {
+  transform: rotate(0deg);
+}
+
+.volume {
+  position: absolute;
+  left: 100%;
+  display: inline-block;
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: width 0.3s linear 0s, opacity 0.3s linear 0s, visibility 0s linear 0.3s;
+}
+
+.volume-scale {
+  margin: 5px 0;
+  width: 100%;
+  height: 6px;
+  -webkit-appearance: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid #fff;
+  border-radius: 3px;
+  outline: none;
+}
+
+.volume-scale::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  cursor: pointer;
+  background: #fff;
+  width: 6px;
+  height: 15px;
+  border-radius: 2px;
+  border-color: transparent;
+}
+
+.volume.open {
+  transition: width 0.3s linear 0s, opacity 0.5s linear 0s;
+  width: 110px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.play-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.play-progress-bar {
+  margin-bottom: 10px;
+}
+
+.play-progress {
+  width: 10em;
+  height: 8px;
+  vertical-align: middle;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.play-progress::-webkit-progress-bar {
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.play-progress::-webkit-progress-value {
+  background: #fff;
+}
+
+.play-progress::-moz-progress-value {
+  background: #fff;
+}
+
+.play-current,
+.play-duration,
+.play-title {
+  font-size: 0.75rem;
+}
+
+.player-btn {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  height: 45px;
+  background-size: 25px 25px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url(assets/svg/audio.svg);
+  border-radius: 0 0px 10px 0;
+  border: 0;
+  outline: 0;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  transform: translateX(100%);
+}
+
+.player-btn:hover {
+  opacity: 1;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  row-gap: 5px;
+  width: 180px;
+  min-height: 180px;
+  text-align: left;
+}
+
+.weather-error {
+  margin-top: -10px;
+}
+
+.description-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.weather-icon {
+  font-size: 44px;
+}
+
+.city {
+  width: 170px;
+  height: 34px;
+  padding: 5px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+}
+
+.city::placeholder {
+  font-size: 20px;
+  color: #fff;
+  opacity: 0.6;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 40vh;
+  padding: 20px;
+}
+
+.slider-icon {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  cursor: pointer;
+}
+
+.slide-prev {
+  left: 20px;
+  background-image: url(assets/svg/slider-prev.svg);
+}
+
+.slide-next {
+  right: 20px;
+  background-image: url(assets/svg/slider-next.svg);
+}
+
+.time {
+  min-height: 124px;
+  margin-bottom: 10px;
+  font-family: "Arial-MT";
+  font-size: 100px;
+  letter-spacing: -4px;
+}
+
+.date {
+  min-height: 28px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.greeting-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: center;
+  min-height: 48px;
+  width: 100vw;
+  font-size: 40px;
+}
+
+.greeting {
+  flex: 1;
+  padding: 10px;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.name {
+  flex: 1;
+  max-width: 50%;
+  padding: 10px;
+  font-size: 40px;
+  text-align: left;
+  color: #fff;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.name::placeholder {
+  color: #fff;
+  opacity: 0.6;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  min-height: 30vh;
+  padding: 20px;
+}
+
+.change-quote {
+  margin-bottom: 30px;
+  background-image: url(assets/svg/reload.svg);
+}
+
+.quote {
+  min-height: 32px;
+}
+
+.author {
+  min-height: 20px;
+}
+
+.quote-block {
+  margin-bottom: 20px;
+}
+
+.control {
+  min-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  font-size: 0.875rem;
+}
+
+.copyright {
+  line-height: 1.4;
+}
+
+.github {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.github::after {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  content: "";
+  width: 1.4em;
+  height: 1.4em;
+  margin-left: 5px;
+  background-image: url(assets/svg/github.svg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: auto 100%;
+}
+
+.github:hover {
+  opacity: 1;
+}
+
+.course {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.course:hover {
+  opacity: 1;
+}
+
+.settings-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url(assets/svg/settings.svg);
+  transform: translateZ(0);
+}
+
+.settings {
+  min-width: 300px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  opacity: 0;
+  padding: 30px;
+  font-size: 16px;
+  border-radius: 10px 0 0 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  will-change: transform;
+  transform: translateX(100%);
+  transition: transform 0.5s ease 0s, opacity 0.5s ease 0s;
+}
+
+.settings.open {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.settings-active {
+  text-align: right;
+}
+
+.settings-close {
+  padding: 5px;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  opacity: 0.8;
+  transform: translateZ(0);
+  cursor: pointer;
+  transition: 0.3s;
+  color: #fff;
+  font-size: inherit;
+  text-align: right;
+}
+
+.settings-close:hover {
+  opacity: 1;
+}
+
+.settings-close:active {
+  border: 0;
+  outline: 0;
+  transform: scale(1.1);
+}
+
+.language-group {
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.language-radio {
+  display: none;
+}
+
+.language-label {
+  position: relative;
+  display: inline-block;
+  padding-left: 15px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.language-radio:checked + .language-label::before {
+  color: #C5B358;
+}
+
+.language-label::before {
+  display: inline-block;
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.elements-group {
+  border: none;
+}
+
+.elements-title {
+  margin-bottom: 20px;
+}
+
+.elements-check {
+  display: none;
+}
+
+.elements-label {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+.elements-label::after {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  content: "";
+  border: 1px solid #fff;
+}
+
+.elements-label::before {
+  position: absolute;
+  left: 3px;
+  display: none;
+  content: "✓";
+  font-weight: 900;
+  color: #C5B358;
+}
+
+.elements-check:checked + .elements-label::before {
+  display: inline-block;
+}
+
+#time,
+#date,
+#weather,
+#quote,
+#greeting,
+#audio {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s linear 0.1s, visibility 0s linear 0s;
+}
+
+#time.hide-element,
+#date.hide-element,
+#weather.hide-element,
+#quote.hide-element,
+#greeting.hide-element,
+#audio.hide-element {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s linear 0s, visibility 0s linear 0.5s;
+}
+
+@media (max-width: 768px) {
+  .time {
+    min-height: 80px;
+    font-size: 72px;
+  }
+  .greeting-container {
+    min-height: 40px;
+    font-size: 32px;
+  }
+  .greeting {
+    padding: 5px;
+  }
+  .name {
+    font-size: 32px;
+    padding: 5px;
+  }
+  .header {
+    justify-content: flex-end;
+  }
+  .player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0;
+    width: 280px;
+    padding: 35px 15px 15px;
+    border-radius: 0 0 10px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    will-change: transform;
+    transform: translateX(-100%);
+  }
+  #audio {
+    transition: transform 0.5s ease 0s;
+  }
+  .player.open {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  .play-list-open {
+    display: none;
+  }
+  .player-btn {
+    display: block;
+  }
+  .change-quote {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .time {
+    min-height: 70px;
+    font-size: 62px;
+  }
+  .greeting-container {
+    display: block;
+    text-align: center;
+    min-height: 35px;
+    font-size: 28px;
+  }
+  .greeting {
+    font-size: 26px;
+  }
+  .name {
+    font-size: 32px;
+    padding: 5px;
+  }
+  .change-quote {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 15px;
+    background-size: 100% 100%;
+  }
+  .copyright-name {
+    display: none;
+  }
+}

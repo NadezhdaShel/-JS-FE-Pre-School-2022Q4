@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/image/favicon.ico" rel="shortcut icon" />
+  <!-- <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" /> -->
+  <title>momentum</title>
+<script defer src="index.js"></script><link href="main.css" rel="stylesheet"></head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="player" id="audio">
+        <audio src="assets/sounds/Aqua-Caelestis.mp3"></audio>
+        <div class="player-controls">
+          <button class="play-sound player-icon"></button>
+          <button class="play-prev player-icon"></button>
+          <button class="play player-icon"></button>
+          <button class="play-next player-icon"></button>
+          <button class="play-volume player-icon"></button>
+          <div class="volume">
+            <input class="volume-scale" type="range" id="rangeVolume" value="50" max="100">
+          </div>
+        </div>
+        <div class="player-error"></div>
+        <div class="play-progress-bar">
+          <div class="play-title">Title</div>
+          <span class="play-current">00:00</span>
+          <progress class="play-progress" id="playerRange" max="100" value="0">
+          </progress>
+          <span class="play-duration">00:00</span>
+        </div>
+        <div>
+          <button class="play-list-open player-icon"></button>
+          <ul class="play-list"></ul>
+        </div>
+        <button class="player-btn"></button>
+      </div>
+      <div class="weather" id="weather">
+        <input type="text" class="city" placeholder="Minsk" title="Enter you city" />
+        <i class="weather-icon owf"></i>
+        <div class="weather-error"></div>
+        <div class="description-container">
+          <span class="temperature"></span>
+          <span class="weather-description"></span>
+        </div>
+        <div class="wind"></div>
+        <div class="humidity"></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="slider-icons">
+        <button class="slide-prev slider-icon"></button>
+        <button class="slide-next slider-icon"></button>
+      </div>
+      <time class="time" id="time"></time>
+      <date class="date" id="date"></date>
+      <div class="greeting-container" id="greeting">
+        <span class="greeting"></span>
+        <input type="text" class="name" placeholder="Name" title="Enter you name" />
+      </div>
+    </main>
+    <footer class="footer">
+      <div id="quote">
+        <button class="change-quote"></button>
+        <div class="quote-block">
+          <div class="quote"></div>
+          <div class="author"></div>
+        </div>
+      </div>
+      <div class="control">
+        <div class="course">
+          <a href="https://rs.school/js/" class="footer__link">
+            <img src="assets/svg/rsschool.svg" alt="rsSchool" width="60" height="22">
+          </a>
+        </div>
+        <div class="copyright">&#169; 2023 <a href="https://github.com/Nadezhdashel/" class="github">
+            &nbsp;<span class="copyright-name">Nadezhda Shelepova</span>
+          </a>
+        </div>
+        <div>
+          <button class="settings-icon"></button>
+          <div class="settings" id="settings">
+            <fieldset class="language-group" id="language-group">
+              <input type="radio" id='language-ru' value="ru" name="language" class="language-radio">
+              <label for="language-ru" class="language-label">РУС</label>
+              <input type="radio" id='language-en' value="en" name="language" class="language-radio" checked>
+              <label for="language-en" class="language-label">EN</label>
+            </fieldset>
+            <fieldset class="elements-group">
+              <legend class="elements-title">Select visible elements</legend>
+              <div>
+                <input type="checkbox" class="elements-check" name="elements" id="time-elem" value="time" checked>
+                <label for="time-elem" class="elements-label">Time</label>
+                <input type="checkbox" class="elements-check" name="elements" id="date-elem" value="date" checked>
+                <label for="date-elem" class="elements-label">Date</label>
+                <input type="checkbox" class="elements-check" name="elements" id="greeting-elem" value="greeting"
+                  checked>
+                <label for="greeting-elem" class="elements-label">Greeting</label>
+                <input type="checkbox" class="elements-check" name="elements" id="weather-elem" value="weather" checked>
+                <label for="weather-elem" class="elements-label">Weather</label>
+                <input type="checkbox" class="elements-check" name="elements" id="quote-elem" value="quote" checked>
+                <label for="quote-elem" class="elements-label">Quote</label>
+                <input type="checkbox" class="elements-check" name="elements" id="audio-elem" value="audio" checked>
+                <label for="audio-elem" class="elements-label">Audio player</label>
+              </div>
+            </fieldset>
+            <div class="settings-active"><button class="settings-close">Close</button></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
