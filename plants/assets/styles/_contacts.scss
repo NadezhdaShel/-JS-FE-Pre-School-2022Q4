@@ -3,7 +3,7 @@
 }
 
 .contacts__wrapper {
-    min-height: calc(497px + 60px);
+    min-height: calc(490px + 60px);
     padding-top: 60px;
     background-image: url(assets/img/contact_woman.png);
     background-repeat: no-repeat;
@@ -87,6 +87,8 @@
     border-radius: 0;
     background-color: $color-select;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-tap-highlight-color: rgba(225, 225, 225, 0);
+    -webkit-tap-highlight-color: transparent;
 
     &::after {
         position: absolute;
@@ -96,12 +98,14 @@
         height: 16px;
         content: '';
         display: inline-block;
-        background-image: url(assets/svg/arrows.svg#ar-select-close);
+        background-color: #AEA1A1;
+        background-image: url(assets/svg/arrows.svg#arrow-light);
         background-repeat: no-repeat;
         background-position: center;
         transform: translateY(-50%);
+        border-radius: 50%;
         pointer-events: none;
-        transition: transform 0.5s ease 0s;
+        transition: transform 0.4s ease-out, background-color 0.4s ease-out;
 
         @media (max-width: $mobile) {
             right: 22px;
@@ -126,8 +130,8 @@
 
     &.active {
         &::after {
-            transform: translateY(-50%) rotateX(180deg);
-            background-image: url(assets/svg/arrows.svg#ar-select-open);
+            background-color: #8BA07E;
+            transform: translateY(-50%) rotateZ(180deg);
         }
     }
 }
