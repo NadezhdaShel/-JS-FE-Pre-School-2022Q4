@@ -19,7 +19,7 @@ const playerError = document.querySelector('.player-error');
 const playerOpenBtn = document.querySelector('.player-btn');
 
 let isPlay = false;
-let playNum;
+let playNum = 0;
 
 if (playList) {
     playList.forEach((el, i) => {
