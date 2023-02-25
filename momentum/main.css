@@ -1378,6 +1378,8 @@ body {
     font-size: 26px;
   }
   .name {
+    max-width: 100%;
+    text-align: center;
     font-size: 32px;
     padding: 5px;
   }
