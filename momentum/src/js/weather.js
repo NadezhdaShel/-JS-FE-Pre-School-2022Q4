@@ -18,10 +18,12 @@ async function getWeather(cityValue) {
     try {
         const tempUnit = ruleTranslation.temp[language];
         const windUnit = ruleTranslation.wind[language];
+        const humidityTitle = ruleTranslation.humidityTitle[language];
+        const windTitle = ruleTranslation.windTitle[language];
         weatherIcon.classList.add(`owf-${data.weather[0].id}`);
         temperature.textContent = `${Math.round(data.main.temp)} ${tempUnit}`;
-        wind.textContent = `${Math.round(data.wind.speed)} ${windUnit}`;
-        humidity.textContent = `${Math.round(data.main.humidity)} %`;
+        wind.textContent = `${windTitle} ${Math.round(data.wind.speed)} ${windUnit}`;
+        humidity.textContent = `${humidityTitle} ${Math.round(data.main.humidity)} %`;
         weatherDescription.textContent = data.weather[0].description;
 
     } catch (error) {

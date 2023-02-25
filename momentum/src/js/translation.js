@@ -35,7 +35,14 @@ const ruleTranslation = {
         'en': 'Minsk',
         'ru': 'Минск',
     },
-
+    'humidityTitle': {
+        'en': 'Humidity:',
+        'ru': 'Влажность:',
+    },
+    'windTitle': {
+        'en': 'Wind speed:',
+        'ru': 'Скорость ветра:',
+    },
 }
 
 export default ruleTranslation;
