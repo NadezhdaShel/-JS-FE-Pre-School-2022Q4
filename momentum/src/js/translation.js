@@ -28,8 +28,8 @@ const ruleTranslation = {
         'ru': 'Надежда Шелепова',
     },
     'userName': {
-        'en': 'User',
-        'ru': 'Пользователь',
+        'en': '[Enter name]',
+        'ru': '[Введите имя]',
     },
     'city': {
         'en': 'Minsk',
