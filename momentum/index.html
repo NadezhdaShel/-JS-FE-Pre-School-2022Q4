@@ -90,6 +90,19 @@
               <input type="radio" id='language-en' value="en" name="language" class="language-radio" checked>
               <label for="language-en" class="language-label">EN</label>
             </fieldset>
+            <fieldset class="photo-source-group">
+              <legend class="photo-source-title">Select photo source</legend>
+              <div class="photo-source-list">
+                <input type="radio" id='sourceGithub' value="github" name="photoSource" class="photo-source-radio"
+                  checked>
+                <label for="sourceGithub" class="photo-source-label">Github</label>
+                <input type="radio" id='sourceUnsplash' value="unsplash" name="photoSource" class="photo-source-radio">
+                <label for="sourceUnsplash" class="photo-source-label">Unsplash</label>
+              </div>
+              <label for="photoSourceTag" class="tag-label">Tags</label>
+              <input type="text" onkeyup="this.value = this.value.replace(/[^A-Za-z]/g,'');" class="photo-source-tag"
+                name="tag" id="photoSourceTag" placeholder="nature">
+            </fieldset>
             <fieldset class="elements-group">
               <legend class="elements-title">Select visible elements</legend>
               <div>
