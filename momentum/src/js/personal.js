@@ -57,7 +57,7 @@ function setOptions() {
         }
     })
     if (options.value !== "") {
-        photoTag.value = options.photoTag;
+        photoTag.value = options.photoTag || 'nature';
     }
 }
 function setLocalStorage() {
