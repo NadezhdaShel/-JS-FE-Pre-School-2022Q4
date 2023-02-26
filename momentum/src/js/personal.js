@@ -23,7 +23,7 @@ function getOptions() {
     options.blocks = blocks;
     options.language = checkedLanguage.value;
     options.photoSource = checkedPhotoSource.value;
-    if (photoTag.value !== "") {
+    if (photoTag.value !== "" && photoTag.value != undefined) {
         options.photoTag = photoTag.value;
     } else {
         options.photoTag = 'nature';
