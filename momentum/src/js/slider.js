@@ -23,7 +23,7 @@ async function getImageAPI(timeOfDay) {
             document.body.style.backgroundImage = `url(${data.urls.regular})`;
         };
     } catch (error) {
-        document.body.style.backgroundImage = `url(assets/img/bg.jpg)`;
+        document.body.style.backgroundImage = `url(assets/image/bg.jpg)`;
     }
 }
 
