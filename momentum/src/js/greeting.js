@@ -13,16 +13,31 @@ function showGreeting() {
     greeting.textContent = greetingText;
 }
 
-function nameUserChange() {
-    localStorage.setItem('name', nameUser.value);
-}
-
 function translateGreeting(text) {
     const language = options.language;
     const index = ruleTranslation.greeting['en'].indexOf(text);
     return ruleTranslation.greeting[language][index];
 }
 
-nameUser.addEventListener('change', nameUserChange);
+function nameChangeWidth() {
+    nameUser.style.width = 0;
+    if (nameUser.value === '') {
+        nameUser.style.width = '300px';
+    } else {
+        nameUser.style.width = nameUser.scrollWidth + 'px';
+    }
+}
 
-export default showGreeting;
+function nameUserChange() {
+    localStorage.setItem('name', nameUser.value);
+    nameChangeWidth();
+}
+
+function nameUserKeydown() {
+    nameUser.style.width = nameUser.scrollWidth + 'px';
+}
+
+nameUser.addEventListener('change', nameUserChange);
+nameUser.addEventListener('keydown', nameUserKeydown);
+
+export { showGreeting, nameChangeWidth };

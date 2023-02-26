@@ -1,4 +1,5 @@
 import { toggleVisibleBlock } from "./settings.js";
+import { nameChangeWidth } from "./greeting.js";
 
 const nameUser = document.querySelector('.name');
 const city = document.querySelector('.city') || 'Minsk';
@@ -50,6 +51,7 @@ function setLocalStorage() {
 function getLocalStorage() {
     if (localStorage.getItem('name')) {
         nameUser.value = localStorage.getItem('name');
+        nameChangeWidth();
     }
     if (localStorage.getItem('city')) {
         city.value = localStorage.getItem('city');

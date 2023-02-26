@@ -1,4 +1,4 @@
-import showGreeting from './greeting.js';
+import { showGreeting } from './greeting.js';
 import { options } from "./personal.js";
 
 const time = document.querySelector('.time');
