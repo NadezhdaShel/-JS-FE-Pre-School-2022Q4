@@ -7,25 +7,43 @@ const playList = document.querySelector('.play-list');
 let options = {
     language: 'en',
     photoSource: 'github',
+    photoTag: 'nature',
     blocks: ['time', 'date', 'greeting', 'quote', 'weather', 'audio']
 }
 
 function getOptions() {
     const checkedLanguage = document.querySelector('input[name="language"]:checked');
+    const checkedPhotoSource = document.querySelector('input[name="photoSource"]:checked');
     const checkedBlocks = document.querySelectorAll('input[name="elements"]:checked');
+    const photoTag = document.querySelector('.photo-source-tag');
     let blocks = [];
     checkedBlocks.forEach(elem => {
         blocks.push(elem.value);
     })
     options.blocks = blocks;
     options.language = checkedLanguage.value;
+    options.photoSource = checkedPhotoSource.value;
+    if (photoTag.value !== "") {
+        options.photoTag = photoTag.value;
+    } else {
+        options.photoTag = 'nature';
+    }
 }
 
 function setOptions() {
     const languageSettings = document.querySelectorAll('input[name="language"]');
+    const photoSourceSettings = document.querySelectorAll('input[name="photoSource"]');
     const blocksSettings = document.querySelectorAll('input[name="elements"]');
+    const photoTag = document.querySelector('.photo-source-tag');
     languageSettings.forEach(elem => {
         if (elem.value === options.language) {
+            elem.checked = true;
+        } else {
+            elem.checked = false;
+        }
+    })
+    photoSourceSettings.forEach(elem => {
+        if (elem.value === options.photoSource) {
             elem.checked = true;
         } else {
             elem.checked = false;
@@ -38,8 +56,10 @@ function setOptions() {
             elem.checked = false;
         }
     })
+    if (options.value !== "") {
+        photoTag.value = options.photoTag;
+    }
 }
-
 function setLocalStorage() {
     localStorage.setItem('name', nameUser.value);
     localStorage.setItem('city', city.value);

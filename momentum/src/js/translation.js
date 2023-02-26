@@ -43,6 +43,14 @@ const ruleTranslation = {
         'en': 'Wind speed:',
         'ru': 'Скорость ветра:',
     },
+    'tagLabel': {
+        'en': 'Tag',
+        'ru': 'Тег',
+    },
+    'photoSourceTitle': {
+        'en': 'Select photo source',
+        'ru': 'Выберете источник фотографий',
+    },
 }
 
 export default ruleTranslation;

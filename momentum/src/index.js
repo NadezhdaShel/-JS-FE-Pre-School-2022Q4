@@ -15,11 +15,10 @@ window.addEventListener('load', () => {
     getLocalStorage();
     createPage();
 });
-setBg();
-
 
 function createPage() {
     addSettings();
+    setBg();
     showTime();
     getQuotes();
     audioPlayer();

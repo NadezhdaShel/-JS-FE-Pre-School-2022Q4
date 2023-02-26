@@ -1,18 +1,21 @@
 import createPage from "../index.js";
 import { setLocalStorage, options } from "./personal.js";
 import ruleTranslation from "./translation.js";
-import addWeather from "./weather.js";
 
 const closeBtn = document.querySelector('.settings-close');
 const settings = document.querySelector('.settings');
 const openBtn = document.querySelector('.settings-icon');
 const blocksGroup = document.querySelector('.elements-group');
 const languageGroup = document.querySelector('.language-group');
+const photoSourceGroup = document.querySelector('.photo-source-group');
 const elementsTitle = document.querySelector('.elements-title');
+const photoSourceTitle = document.querySelector('.photo-source-title');
 const elementsLabel = document.querySelectorAll('.elements-label');
 const copyright = document.querySelector('.copyright-name');
 const userName = document.querySelector('.name');
 const city = document.querySelector('.city');
+const photoTagLabel = document.querySelector('.tag-label');
+const photoTag = document.getElementById('photoSourceTag');
 
 const blocksContent = ['time', 'date', 'greeting', 'quote', 'weather', 'audio'];
 
@@ -34,6 +37,7 @@ function toggleVisibleBlock() {
 
 function addSettings() {
     const language = options.language;
+    const checkedPhotoSource = document.querySelector('input[name="photoSource"]:checked');
     elementsTitle.textContent = ruleTranslation.elementsTitle[language];
     elementsLabel.forEach((elem, index) => {
         elem.textContent = ruleTranslation.elementsLabel[language][index];
@@ -42,6 +46,14 @@ function addSettings() {
     copyright.textContent = ruleTranslation.copyright[language];
     userName.placeholder = ruleTranslation.userName[language];
     city.placeholder = ruleTranslation.city[language];
+    photoTagLabel.textContent = ruleTranslation.tagLabel[language];
+    photoSourceTitle.textContent = ruleTranslation.photoSourceTitle[language];
+    if (checkedPhotoSource.value === "github") {
+        photoTag.disabled = true;
+    }
+    if (checkedPhotoSource.value === "unsplash") {
+        photoTag.disabled = false;
+    }
 }
 
 closeBtn.addEventListener('click', toggleSettings);
@@ -63,6 +75,12 @@ blocksGroup.addEventListener('change', (event) => {
 languageGroup.addEventListener('change', (event) => {
     setLocalStorage();
     createPage();
+})
+photoSourceGroup.addEventListener('change', (event) => {
+    setLocalStorage();
+    createPage();
+    if (event.target.value === 'github') photoTag.disabled = true;
+    if (event.target.value === 'unsplash') photoTag.disabled = false;
 })
 
 export { addSettings, toggleVisibleBlock };
